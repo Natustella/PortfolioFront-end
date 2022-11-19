@@ -22,9 +22,36 @@
                 #Yo Programo
             </a>  
             <ul class="list-group list-group-horizontal">
-                <li class="list-group-item"><i class="fa-brands fa-linkedin fa-xl"></i></li>
-                <li class="list-group-item"><i class="fa-brands fa-instagram fa-xl"></i></li>
-                <li class="list-group-item"><i class="fa-brands fa-discord fa-xl"></i></li>
+                <li class="list-group-item">
+                  <a
+                  href="https://www.linkedin.com/in/natustella/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="home__social-link">
+                  <i class="fa-brands fa-linkedin fa-xl"></i> 
+                  </a>
+                </li>
+
+                <li class="list-group-item">
+                  <a
+                  href="https://www.instagram.com/natustella2020/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="home__social-link">
+                  <i class="fa-brands fa-instagram fa-xl"></i>
+                  </a>
+                  </li>
+
+                <li class="list-group-item">
+                  <a
+                  href="https://twitter.com/natustella"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="home__social-link">
+                  <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+
                 <!-- Button login -->
                 <li class="list-group-item">
                     <i class="fa-solid fa-user fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -61,73 +88,35 @@
     </div>
   </div>
 
-    
     <div class="banner">
       <img src="ASSETS/Image/banner2.webp" width="100%" height="300" alt="burbujas">
     </div>
-    <!-- Acerca de mi -->    
 
-    <section id="Solo-Yo" class="about">
+  <!-- Acerca de mi -->
+  <section id="about me" class="about">
     <div class="container text-center">
       <div class="row">
-       <div class="col col-lg-2 col-md-4 col-sm-5 col-xs-12 mt-3" >
+        <div class= "col col-lg-3 col-md-4 col-sm-5 col-xs-12 mt-4">
+          <ul style="list-style:none" class="titulo">
+            <li></li><h4><strong>Natalia Herrera</strong></h4></li>
+            <li><h6><strong>Funcional SAP Sr. - Fullstack Developer Jr.</strong></li>
+            <li><h6><strong>Córdoba-Argentina</strong></ul></h6></li>
+       </div>
+       <div class="col col-lg-3 col-md-4 col-sm-5 col-xs-12" >
         <img style="margin: -20%;% 0;" src="ASSETS/Image/me.jpg" class="rounded-circle" alt="about me" title="yo">
        </div>
-<br/>
-<br/>    
-       <div class="col-lg-8 col-md-6 col-sm-7 col-xs-12 mt-3">         
-          <h5 1 1 1 1>Soy analista funcional de TI, especializada en SAP R3 e ISU. Estoy incurcionando ahora en el mundo de la programación. Me encantan los desafíos y el diseño y espero poder crecer técnica y profesionalmente.</h5>
-       </div>
-       <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 mt-3">
-       </div>
-       </div>
-     </div>
-     </div>
-<br/>
-<br/>
-     <div class="titulo">
-        <ul style="list-style:none">
-          <li></li><h4><strong>Natalia Herrera</strong></h4></li>
-          <li><h6><strong>Stack Developer Jr.</strong></li>
-          <li><h6><strong>Funcional SAP</strong></h6></li>
-          <li><h6><strong>Córdoba-Argentina</strong></ul></h6></li>
-        </div>
-      </section>
+      <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12 mt-3">         
+           <h5 1 1 1 1>Soy analista funcional de TI, especializada en SAP R3 e ISU. Estoy incurcionando ahora en el mundo de la programación. Me encantan los desafíos y el diseño y espero poder crecer técnica y profesionalmente.</h5>
+      </div>
+      </div>
+    </div>
+  </section>
 
-   <!-- Modal -->    
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              
-              <div class="modal-body">
-                  <button type="button" class="btn-close" name="button" data-bs-dismiss="modal"></button>
-                  <div class="wrapper">
-                      <div class="logo">
-                          <img src="imagenes/avatarLogin.jpg" alt="avatarLogin">
-                      </div>
-                      <form class="p-3 mt-3">
-                          <div class="form-field d-flex align-items-center">
-                              <span class="far fa-user"></span>
-                              <input type="text" name="userName" autocomplete="off" id="userName" placeholder="Usuario">
-                          </div>
-                          <div class="form-field d-flex align-items-center">
-                              <span class="fas fa-key"></span>
-                              <input type="password" name="password" id="pwd" placeholder="Contraseña">
-                          </div>
-                          <button class="btn mt-3">Log in</button>
-                      </form>
-                      <div class="text-center fs-6">
-                          <a href="#">Contraseña Olvidada?</a> o <a href="#">Registrarse</a>
-                      </div>
-                  </div>
-              </div>    
-          </div>
-      </div>  
-  </div> 
-<br>
-<br>
+    <br/><br/>
+    
       <!--Sección Experiencia-->
-      <div><h3>Experiencia</h3>
+      <section id="experiencia" class="experiencia">
+      <div><h3><strong>Experiencia</strong></h3>
       <br>
       <div class="experiencia" id="accordionExample">
         <div class="accordion-item">
@@ -185,7 +174,6 @@
           </div>
         </div>
       <br>
-
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingFour">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -205,12 +193,12 @@
       </div>
       </div>
       </div>
-      <br>
-      <br>
-      <br>
+      </section>
+      <br/><br/><br/>
 
-      <!--Educación-->
-      <div><h3>Educación</h3>
+      <!--Cursos-->
+      <section id="cursos" class="cursos">
+      <div><h3><strong>Cursos</strong></h3>
       <br>
       <div class="educacion" id="accordionExample">
         <div class="accordion-item">
@@ -260,21 +248,19 @@
         </div>
       </div>
       </div>
-      <br>
-      <br>
-      <br>
+      </section>
+      <br/><br/><br/>
 
       <!--Sección Skills-->
-      <div><h3>Hard & Soft Skills</h3>
-      <br>
-      <section id="skils" class="skils">
+      <section id="skils" class="skils"></section>
+      <div><h3><strong>Skills</strong></h3>
         <div class="progress-circle-container">
           <ul class="list-group list-group-horizontal">
             <li>
               <div class="card mb-3" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <div class="progress-circle progress-6"><span>6</span></div>
+                      <div class="progress-circle progress-60"><span>60</span></div>
                     </div>
                     <div class="col-md-10">
                       <div class="card-body">
@@ -292,7 +278,7 @@
                     </div>
                     <div class="col-md-12">
                       <div class="card-body">
-                        <h5 class="card-title">SAP</h5>
+                        <h5 class="card-title">MySQL</h5>
                       </div>
                     </div>
                   </div>
@@ -362,7 +348,7 @@
                     </div>
                     <div class="col-md-12">
                       <div class="card-body">
-                        <h5 class="card-title">MySQL</h5>
+                        <h5 class="card-title">SAP</h5>
                       </div>
                     </div>
                   </div>
@@ -370,25 +356,25 @@
               </li>
             </ul>
           </div>
-        </section>
+      </section>
       </div>
-      <br>
-      <br>
-      <br>
+      <br/><br/><br/>
 
       <!-- seccion Proyectos -->
-      <di>
-        <h3>Proyectos</h3>
-          <ul style="list-style: none">
+      <section id="proyectos" class="proyectos">
+      <div>
+        <h3><strong>Proyectos</strong></h3>
+          <ul style="list-style: none"><br/>
             <li>Participación de proyecto de implementación de SAP</li>
             <li>Creación de Portfolio</li>
           </ul>
-      </di>
-      <br>
-      <br>
+      </div>
+      </section>
+      <br/><br/>
 
 <footer>
 <!-- Button Contact -->
+<section id="contacto" class="contacto">
 <div class="footer-right">
     <button class="btn btn-primary" type="button"><i class="fa-solid fa-envelope"></i> &nbsp; Contáctame</i>
       <div class="mb-3">
@@ -404,12 +390,13 @@
         <button type="button" class="btn btn-primary">Enviar</button>
       </div>
  </div>
+</section>
  <br/>
+
  <div class="page-item">
   <hr data -v -0e491115>
   <p class="copyright" data  -v -0e491115> Copyright © 2022 <b>Natalia Herrera</b> All Rights Reserved.</p>
-  </div>
-
+</div>
 </footer>
 
 
