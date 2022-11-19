@@ -1,7 +1,10 @@
 .navbar.navbar-expand-lg.bg-secondary {
     background-color: rgb(203, 154, 94)!important;
 }
-i.fa-brands.fa-discord.fa-xl:hover {
+a {
+    color: rgb(110, 109, 109);
+}
+i.fa-brands.fa-twitter.fa-xl:hover {
 color: #5560a6   
 }
 i.fa-brands.fa-instagram.fa-xl:hover {
@@ -11,10 +14,12 @@ i.fa-brands.fa-linkedin.fa-xl:hover {
 color: #2828D7;
 }
 i.fa-solid.fa-user.fa-xl:hover {
-color: #155656;
+color: #48b4b4;
 }
 .list-group {
     --bs-list-group-bg: #dbcfbd;
+    --bs-list-group-active-bg: #dbcfbd;
+    --bs-list-group-active-border-color: #dbcfbd;
 }
 *{
     background-color:#dbcfbd;
@@ -23,7 +28,7 @@ color: #155656;
 
 .titulo {
     padding-top: 5px;
-    padding-left: 80px;
+    padding-left: 5px;
 }
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
     background-color: #dbcfbd;
@@ -57,6 +62,8 @@ body {
     font-family: 'Open Sans Condensed', sans-serif; 
     margin-left: 15px;
     margin-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 } 
 .h1 { 
     color: #63B8FF; text-align: center; 
@@ -73,11 +80,9 @@ body {
 .progress-circle span:after { 
     content: "%"; font-weight: 600; color: #8b8b8b; 
 }
-circle.progress-6:after { 
-    background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(111.6deg, rgb(203, 154, 94) 50%, #ebebeb 50%, #ebebeb);
-}
-.progress-circle.progress-6:after { 
-    background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(111.6deg, rgb(203, 154, 94) 50%, #ebebeb 50%, #ebebeb); 
+
+.progress-circle.progress-60:after { 
+    background-image: linear-gradient(-54deg, rgb(203, 154, 94) 50%, transparent 50%, transparent), linear-gradient(270deg,rgb(203, 154, 94)50%, #ebebeb 50%, #ebebeb);
 } 
 .progress-circle.progress-95:after { 
     background-image: linear-gradient(72deg, rgb(203, 154, 94) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(203, 154, 94) 50%, #ebebeb 50%, #ebebeb); 
