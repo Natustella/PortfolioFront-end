@@ -4,8 +4,8 @@
 a {
     color: rgb(110, 109, 109);
 }
-i.fa-brands.fa-twitter.fa-xl:hover {
-color: #5560a6   
+i.fa-brands.fa-instagram.fa-xl:hover {
+color: #404777;
 }
 i.fa-brands.fa-instagram.fa-xl:hover {
 color: #AA3C83;
@@ -14,7 +14,7 @@ i.fa-brands.fa-linkedin.fa-xl:hover {
 color: #2828D7;
 }
 i.fa-solid.fa-user.fa-xl:hover {
-color: #48b4b4;
+color: rgb(203, 154, 94);
 }
 .list-group {
     --bs-list-group-bg: #dbcfbd;
@@ -125,4 +125,21 @@ textarea {
 .copyright {
     text-align: center;
     font-size: small;
+}
+
+/* Panel Admin2 */
+.but-panel{
+    color:rgb(203, 154, 94);
+}
+
+.btn-secondary {
+    --bs-btn-color: black;
+    --bs-btn-bg: #dbcfbd;
+    --bs-btn-hover-bg: rgb(203, 154, 94);
+}
+i.fa-solid.fa-house:hover {
+    color: rgb(203, 154, 94) 
+}
+section.home {
+    padding: 7px;;
 }
