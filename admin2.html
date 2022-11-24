@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin2</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/213d716d32.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type= "text/css" href="ASSETS/CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <section class="datos-personales" id="datos-personales">
+            <nav class="navbar navbar-expand-lg bg-secondary">
+              <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                      <img src="ASSETS/Image/logo ArgentinaPrograma.png" alt="Logo" width="20%" height="auto" class="d-inline-block align-text-top">
+                      #Yo Programo
+                  </a>  
+                  <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item">
+                        <a
+                        href="https://www.linkedin.com/in/natustella/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="home__social-link">
+                        <i class="fa-brands fa-linkedin fa-xl"></i> 
+                        </a>
+                      </li>
+      
+                      <li class="list-group-item">
+                        <a
+                        href="https://www.instagram.com/natustella2020/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="home__social-link">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                        </a>
+                        </li>
+      
+                      <li class="list-group-item">
+                        <a
+                        href="https://twitter.com/natustella"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="home__social-link">
+                        <i class="fa-brands fa-twitter"></i>
+                        </a>
+                      </li>
+      
+                      <!-- Button login -->
+                      <li class="list-group-item">
+                        <i class="fa-solid fa-user-lock" type="button">
+                        </i>
+                    </li>
+                  </ul>
+          </nav>
+           <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="mb-3 row">
+                      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control-plaintext" id="staticEmail" value="email@dominio.com">
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword">
+                      </div>
+                    </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Iniciar Sesión</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <main>
+        <section class="home"></section>
+          <div><button type="button" class="btn btn-secondary btn p-2" data-bs-toggle="modal">          
+            <div class="row g-2 g-lg-3 mt-1">
+            <div class="col" class="but-panel">
+          <a
+          href="http://127.0.0.1:5500/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="home__social-link">
+          <i class="fa-solid fa-house"></i>
+          </a><br/>Home</button>
+
+        </div>
+          </div>
+        </div>
+      
+       
+      </section>
+
+    <section id="panel2" class="panel2"  >
+        <div class="container text-center">
+            <div class="row g-2 g-lg-3 mt-1">
+              <div class="col" class="but-panel">
+                <div><button type="button" class="btn btn-secondary btn p-5" data-bs-toggle="modal" data-bs-target="#redesModal"><i class="fa-solid fa-users"></i><br/>Redes Sociales</button></div>
+              </div>
+              <div class="col">
+                <div><button type="button" class="btn btn-secondary btn p-5" data-bs-toggle="modal" data-bs-target="#bannerModal"><i class="fa-solid fa-image"></i><br/>Banner</button></div>
+              </div>
+              <div class="col">
+                <div><button type="button" class="btn btn-secondary btn p-5" data-bs-toggle="modal" data-bs-target="#personalModal"><i class="fa-solid fa-person"></i><br/>Datos Personales</button></div>
+              </div>
+            </div>
+            <div class="row g-2 g-lg-3 mt-2">
+                <div class="col">
+                  <div><button type="button" class="btn btn-secondary btn p-5" data-bs-toggle="modal" data-bs-target="#experienciaModal"><i class="fa-solid fa-laptop"></i><br/>Experiencia</button></div>
+                </div>
+                <div class="col">
+                  <div><button type="button" class="btn btn-secondary btn p-5" data-bs-toggle="modal" data-bs-target="#cursosModal"><i class="fa-solid fa-graduation-cap"></i><br/>Cursos</button></div>
+                </div>
+                <div class="col">
+                  <div><button type="button" class="btn btn-secondary btn p-5" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-screwdriver-wrench"></i><br/>Skills</button></div>
+                </div>
+              </div>
+              <div class="row g-2 g-lg-3 mt-2">
+                <div class="col">
+                  <div><button type="button" class="btn btn-secondary btn p-5" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid fa-folder-open"></i><br/>Proyectos</button></div>
+                </div>
+                <div class="col">
+                  <div><button type="button" class="btn btn-secondary btn p-5" data-bs-toggle="modal" data-bs-target="#exampleModal"><br/>prueba</button></div>
+                </div>
+                <div class="col">
+                  <div><button type="button" class="btn btn-secondary btn p-5" data-bs-toggle="modal" data-bs-target="#exampleModal"><br/>prueba2</button></div>
+                </div>
+              </div>
+          </div>
+
+
+    </section>
+      </main>
+
+    
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalLabel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Datos Personales</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control-plaintext" id="staticEmail" value="email@dominio.com">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Iniciar Sesión</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Modal Redes Sociales-->
+      <div class="modal fade" id="redesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Redes Sociales</h1> 
+              <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="home__social-link">
+              <i class="#"></i>
+              <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+              <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+              </a>
+              <button type="button" class="btn btn-secondary">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Banner-->
+      <div class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Banner</h1>
+              <div class="mb-3">
+                <label for="formFileSm" class="form-label"></label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file">
+                <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+              </div>
+              <button type="button" class="btn btn-secondary">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Datos Personales -->
+      <div class="modal fade" id="personalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Datos Personales</h1>
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                <div class="mb-3">
+                    <label for="formFileSm" class="form-label">Foto de Perfil</label>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="formFileSm" class="form-label">Nombre y Apellido</label>
+                    <input class="form-control form-control-sm" id="formFileSm" type="tex">
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Título</label>
+                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+               </div>
+               <div class="mb-3">
+                   <label for="" class="form-label">Acerca de mi</label>
+                   <textarea class="form-control" name="" id="" rows="3"></textarea>
+                   <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                   <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+               </div>
+            </div>
+            <button type="button" class="btn btn-secondary">Guardar</button>
+          </div>
+         </div>
+        </div>
+    </div>
+
+       <!-- Modal Experiencia-->
+       <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Experiencia</h1>
+
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                <div class="mb-3">
+                  <label for="formFileSm" class="form-label">Título</label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="tex">
+                  <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+              </div>
+                <div class="mb-3">
+                    <label for="formFileSm" class="form-label">logo empresa</label>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="" class="form-label">Empresa - Período</label>
+                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+               </div>
+               <div class="mb-3">
+                   <label for="" class="form-label">Descripción</label>
+                   <textarea class="form-control" name="" id="" rows="3"></textarea>
+                   <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                   <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+               </div>
+            </div>
+            <button type="button" class="btn btn-secondary">Guardar</button>
+          </div>
+         </div>
+        </div>
+    </div>
+
+      <!-- Modal Cursos-->
+       <div class="modal fade" id="cursosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Cursos</h1>
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                <div class="mb-3">
+                  <label for="formFileSm" class="form-label">Nombre del Curso</label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="tex">
+                  <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+              </div>
+                <div class="mb-3">
+                    <label for="formFileSm" class="form-label">Certificado</label>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+                </div>
+               <div class="mb-3">
+                   <label for="" class="form-label">Descripción - Fecha</label>
+                   <textarea class="form-control" name="" id="" rows="3"></textarea>
+                   <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                   <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+               </div>
+            </div>
+            <button type="button" class="btn btn-secondary">Guardar</button>
+          </div>
+         </div>
+        </div>
+    </div>
+
+
+      <!-- Modal Skills-->
+      <div class="modal fade" id="exampleModalLabel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Datos Personales</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control-plaintext" id="staticEmail" value="email@dominio.com">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Iniciar Sesión</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Proyectos-->
+      <div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Datos Personales</h1>
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+               <div class="mb-3">
+                   <label for="" class="form-label">Proyectos</label>
+                   <textarea class="form-control" name="" id="" rows="3"></textarea>
+                   <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>
+                   <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>
+               </div>
+            </div>
+            <button type="button" class="btn btn-secondary">Guardar</button>
+          </div>
+         </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
