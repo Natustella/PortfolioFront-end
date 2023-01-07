@@ -1,0 +1,20 @@
+/* estilo foto
+/*@media (min-width: 576px) {
+    #miFoto {
+        position: absolute;
+        width: 15%;
+        margin: 20%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        top: 600px;
+        margin: -20%;
+    }
+}
+*@media (max-width: 576px) {
+    #miFoto {
+        position: absolute;
+        width: 15%;
+        margin: 20%;
+        top:630px;
+    }
+}*/

@@ -1,0 +1,102 @@
+{
+	"aboutme":{ 
+		"name": "Natalia Herrera",
+	    "position": "Funcional SAP Sr. - Fullstack Developer Jr.",
+	    "ubicación": "Córdoba-Argentina",
+        "imgMe": "./assets/Image/me.jpg",
+		"sobreMi": "Soy analista funcional de TI, especializada en SAP R3 e ISU. Estoy incurcionando ahora en el mundo de la programación. Me encantan los desafíos y el diseño y espero poder crecer técnica y profesionalmente."
+	},
+
+	"experiencia": [{
+		"pos": "Analista Funcional SAP ISU - R3",
+		"logo": ".Image/Geser-removebg-preview.png",
+		"empresa": "GESER S.A.",
+		"desde": "Julio 2021",
+		"hasta": "Actualidad",
+		"actividad": "Soporte funcional de aplicaciones, resolución de incidentes, análisis de nuevos requerimientos para una mejora contínua."
+	},
+	{
+	    "pos": "Analista Funcional SAP ISU - CS, SD y WM",
+	    "logo": ".Image/ecogas-removebg-preview.png",
+	    "empresa": "ECOGAS",
+	    "desde": "Abril 2018",
+	    "hasta": "Julio 2021",
+	    "actividad": "Mantenimiento correctivo y evolutivo. Nuevos desarrollos adaptados al negocio de la industria del gas. Soporte funcional a usuarios, capacitación, elaboración de manuales, pruebas funcionales y soporte post productivo."
+	},
+	{
+	    "pos": "Administrativa - Sector Mesa de Análisis",
+	    "logo": ".Image/ecogas-removebg-preview.png",
+	    "empresa": "ECOGAS",
+	    "desde": "Noviembre 2010",
+	    "hasta": "Abril 2018",
+	    "actividad": "Recepción, análisis y respuesta de reclamos comerciales de clientes.Referente de sector de análisis Región Cuyana.Armado de informes para ENARGAS (Ente Nacional de Regulación del Gas) y respuestas de auditorías. Procesos de facturación y refacturación de clientes. Capacitaciones internas. Confección de plantillas para respuestas a reclamos."
+
+	},
+	{
+	    "pos": "Administrativa - Área de Prestaciones Médicas",
+	    "logo": ".Image/gea-removebg-preview.png",
+	    "empresa": "GEA S.A.",
+	    "desde": "Julio 1997 ",
+	    "hasta": "Septiembre 2010",
+	    "actividad": "Tareas administrativas, área de prestaciones médicas, autorizaciones, control de facturación de prestadores, uso de Nomenclador Nacional, página de AFIP , Superintendencia de Servicios de Salud. APE."
+	}],
+
+	"cursos": [{
+		"titulo": "#Yo Programo",
+		"imag": "#",
+		"dado": "Argentina Programa",
+		"fecha": "Mayo 2023"
+	},
+	{
+		"titulo": "#Se Programo",
+		"imag": ".Image/SeProgramar.jpg",
+		"dado": "Argentina Programa",
+		"fecha": "Junio 2022"		
+	},
+	{
+		"titulo": "Academia Sales & Distribution with SAP (SD) TSCM60/TSCM62",
+		"imag": ".Image/SD.jpg",
+		"dado": "Axigma",
+		"fecha": "Agosto 2021"
+	}],
+
+	"skills": [{
+		"percent": "60",
+		"habilidad": "GitHub"
+	},
+	{
+		"percent": "82",
+		"habilidad": "HTML"
+	},
+    {
+		"percent": "40",
+		"habilidad": "MySql"
+	},
+	{
+		"percent": "75",
+		"habilidad": "CSS"
+	},
+	{
+		"percent": "78",
+		"habilidad": "TypeScript"	
+	},
+	{
+		"percent": "79",
+		"habilidad": "Angular"	
+	},
+	{
+		"percent": "81",
+		"habilidad": "Bootstrap"	
+	},
+	{
+		"percent": "95",
+		"habilidad": "SAP"	
+	}],
+
+	"Proyectos": [{
+		"description": "Participación de proyecto de implementación de SAP."
+	},
+	{
+		"description": "Creación de Portfolio."
+	}]
+}
