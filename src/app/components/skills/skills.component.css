@@ -12,6 +12,9 @@
 .progress-circle span:after { 
     content: "%"; font-weight: 600; color: #8b8b8b; 
 }
+h6 {
+    padding: 1cm;
+}
 
 /*Este es el CSS de los círculos desde el 1% y hasta el 100%*/
 
