@@ -3,24 +3,40 @@ textarea {
     margin-top: 9px;
     border: #CB9A5E
 }
+
 .footer-right {
     text-align: right;
 }
-.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
     background-color: #dbcfbd;
-    border-color:#FAEDDB;
+    border-color: #FAEDDB;
 }
+
 .btn {
     border: #dbcfbd;
 }
+
 button.btn.btn-primary {
     color: #010101;
-    box-shadow: #dbcfbd; 
+    box-shadow: #dbcfbd;
 }
+
 .btn-primary {
     --bs-btn-bg: #dbcfbd;
     --bs-btn-hover-bg: #CB9A5E;
 }
+
 a {
     color: #010101;
+}
+
+p {
+        text-align: center;
+        font-size: small;
+        box-shadow: 2px -2px 5px;
 }

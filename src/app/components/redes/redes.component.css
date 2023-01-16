@@ -1,21 +1,27 @@
 a {
     color: #6E6D6D;
 }
+
 i.fa-brands.fa-twitter:hover {
-    color: #4476c2;    
+    color: #4476c2;
 }
+
 i.fa-brands.fa-github:hover {
     color: #6e1387;
 }
+
 i.fa-brands.fa-instagram.fa-xl:hover {
-color: #AA3C83;
+    color: #AA3C83;
 }
+
 i.fa-brands.fa-linkedin.fa-xl:hover {
-color: #2828D7;
+    color: #2828D7;
 }
+
 i.fa-solid.fa-user.fa-xl:hover {
-color: #CB9A5E;
+    color: #CB9A5E;
 }
+
 .list-group {
     --bs-list-group-bg: #dbcfbd;
     --bs-list-group-active-bg: #dbcfbd;

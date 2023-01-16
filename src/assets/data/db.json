@@ -1,15 +1,17 @@
-{
+{   
+	"banner": "./assets/Image/banner.webp",
+
 	"aboutme":{ 
 		"name": "Natalia Herrera",
 	    "position": "Funcional SAP Sr. - Fullstack Developer Jr.",
-	    "ubicación": "Córdoba-Argentina",
+	    "ubicacion": "Córdoba-Argentina",
         "imgMe": "./assets/Image/me.jpg",
-		"sobreMi": "Soy analista funcional de TI, especializada en SAP R3 e ISU. Estoy incurcionando ahora en el mundo de la programación. Me encantan los desafíos y el diseño y espero poder crecer técnica y profesionalmente."
+		"sobreMi": "Hola, soy analista funcional de TI, me especializo en algunos módulos de SAP R3 e ISU. Estoy incurcionando ahora en el mundo de la programación. Me encantan los desafíos y el diseño por lo que espero poder crecer técnica y profesionalmente."
 	},
 
 	"experiencia": [{
 		"pos": "Analista Funcional SAP ISU - R3",
-		"logo": ".Image/Geser-removebg-preview.png",
+		"logo": "./assets/Image/Geser.png",
 		"empresa": "GESER S.A.",
 		"desde": "Julio 2021",
 		"hasta": "Actualidad",
@@ -17,7 +19,7 @@
 	},
 	{
 	    "pos": "Analista Funcional SAP ISU - CS, SD y WM",
-	    "logo": ".Image/ecogas-removebg-preview.png",
+	    "logo": "./assets/Image/ecogas.png",
 	    "empresa": "ECOGAS",
 	    "desde": "Abril 2018",
 	    "hasta": "Julio 2021",
@@ -25,7 +27,7 @@
 	},
 	{
 	    "pos": "Administrativa - Sector Mesa de Análisis",
-	    "logo": ".Image/ecogas-removebg-preview.png",
+	    "logo": "./assets/Image/ecogas.png",
 	    "empresa": "ECOGAS",
 	    "desde": "Noviembre 2010",
 	    "hasta": "Abril 2018",
@@ -34,7 +36,7 @@
 	},
 	{
 	    "pos": "Administrativa - Área de Prestaciones Médicas",
-	    "logo": ".Image/gea-removebg-preview.png",
+	    "logo": "./assets/Image/gea.png",
 	    "empresa": "GEA S.A.",
 	    "desde": "Julio 1997 ",
 	    "hasta": "Septiembre 2010",
@@ -48,14 +50,14 @@
 		"fecha": "Mayo 2023"
 	},
 	{
-		"titulo": "#Se Programo",
-		"imag": ".Image/SeProgramar.jpg",
+		"titulo": "#Se Programar",
+		"imag": "./assets/Image/SeProgramar.jpg",
 		"dado": "Argentina Programa",
 		"fecha": "Junio 2022"		
 	},
 	{
 		"titulo": "Academia Sales & Distribution with SAP (SD) TSCM60/TSCM62",
-		"imag": ".Image/SD.jpg",
+		"imag": "./assets/Image/SD.jpg",
 		"dado": "Axigma",
 		"fecha": "Agosto 2021"
 	}],
@@ -93,7 +95,7 @@
 		"habilidad": "SAP"	
 	}],
 
-	"Proyectos": [{
+	"proyectos": [{
 		"description": "Participación de proyecto de implementación de SAP."
 	},
 	{
