@@ -1,10 +1,11 @@
-      <!-- seccion Proyectos -->
+<!-- seccion Proyectos -->
 <section id="proyectos" class="proyectos">
     <div>
         <h3><strong>Proyectos</strong></h3>
-            <ul style="list-style: none"><br/>
-              <li>Participación de proyecto de implementación de SAP</li>
-              <li>Creación de Portfolio</li>
-            </ul>
-    </div><br/><br/>
+        <ul style="list-style: none"><br />
+            <li *ngFor="let proyectos of proyectosList">
+                {{proyectos.description}}
+            </li>
+        </ul>
+    </div><br /><br />
 </section>

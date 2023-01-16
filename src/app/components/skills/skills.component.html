@@ -1,87 +1,19 @@
-    <!--Sección Skills-->
-    <section id="skills" class="skills">
-      <h3><strong>Skills</strong></h3>
-        <div class = "row">
-            <div class="progress-circle-container">
-              <ul style="list-style: none;" class="list-group list-group-horizontal">
-                <li>
-                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                          <div class="progress-circle progress-60"><span>60</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                      <h6 class="card-title">GitHub</h6>
-                    </div>
-                </li>
-                <li>
-                  <li>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                      <div class="card-body">
-                        <h6 class="card-title">Html</h6>
-                      </div>
-                            <div class="progress-circle progress-82"><span>82</span>
-                          </div>
-                      </div>
-                  </li>
-                <li>
-                  <li>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                            <div class="progress-circle progress-50"><span>50</span>
-                          </div>
-                      </div>
-                      <div class="card-body">
-                        <h6 class="card-title">MySQL</h6>
-                      </div>
-                  </li>
-                <li>
-                  <li>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                      <div class="card-body">
-                        <h6 class="card-title">CSS</h6>
-                      </div>
-                            <div class="progress-circle progress-75"><span>75</span>
-                          </div>
-                      </div>
-                  </li>
-              </ul>
-              <ul style="list-style: none;" class="list-group list-group-horizontal">
-                <li>
-                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                          <div class="progress-circle progress-78"><span>78</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                      <h6 class="card-title">TypeScript</h6>
-                    </div>
-                </li>
-                <li>
-                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="card-body">
-                      <h6 class="card-title">Angular</h6>
-                    </div>
-                          <div class="progress-circle progress-79"><span>79</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                          <div class="progress-circle progress-81"><span>81</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                      <h6 class="card-title">Bootstrap</h6>
-                    </div>
-                </li>
-                <li>
-                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <div class="card-body">
-                      <h6 class="card-title">SAP</h6>
-                    </div>
-                          <div class="progress-circle progress-95"><span>95</span>
-                        </div>
-                    </div>
-                </li>
-              </ul>
-            </div>
-       </div><br/><br/><br/>
-    </section>
+<section id="skills" class="skills">
+  <h3><strong>Skills</strong></h3>
+  <div class="container-fluid" id="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="progress-circle-container">
+          <div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <ul style="list-style: none;" class="list-group list-group-horizontal-md">
+              <li *ngFor="let skills of skillsList">
+                <div class="progress-circle progress-{{skills.percent}}"><span>{{skills.habilidad}}</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

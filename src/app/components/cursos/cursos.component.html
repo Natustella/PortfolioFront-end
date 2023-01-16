@@ -1,53 +1,25 @@
-      <!--Cursos-->
-      <section id="cursos" class="cursos">
-        <div><h3><strong>Cursos</strong></h3>
-        <br>
-        <div class="educacion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingSix">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-               <strong>#Yo Programo</strong>  &nbsp; &nbsp;<i class="fa-solid fa-caret-down"></i>
-               <br>
-              </button>
-            </h2>
-            <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <br>
-                <strong>Argentina Programa</strong> &nbsp;Mayo 2023
-                <img src="#">
-              </div>
-            </div>
-          </div>
+<section id="cursos" class="cursos">
+  <div>
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+      aria-expanded="true" aria-controls="collapseSeven">
+      <h3><strong>Cursos</strong></h3> &nbsp; &nbsp;<i class="fa-solid fa-sort"></i>
+      <br>
+    </button>
+  </div>
+  <br>
+  <div class="cursos" id="accordionExample">
+    <div *ngFor="let cursos of cursosList" class="accordion-item">
+      <h6 class="accordion-header" id="headingSeven">
+        <strong>{{cursos.titulo}}</strong> &nbsp; &nbsp;
+      </h6>
+      <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
           <br>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingSeven">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-               <strong>#Se Programar</strong>  &nbsp; &nbsp;<i class="fa-solid fa-caret-down"></i>
-              </button>
-            </h2>
-            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <br>
-                <img src="../../../assets/Image/SeProgramar.jpg"> &nbsp;
-                <strong>Argentina Programa</strong> &nbsp;Junio 2022
-              </div>
-          </div>
-          </div>
-          <br>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingEight">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                <strong>Academia Sales & Distribution with SAP (SD) TSCM60/TSCM62</strong>  &nbsp; &nbsp;<i class="fa-solid fa-caret-down"></i>
-              </button>
-            </h2>
-            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <br>
-                <img src="../../../assets/Image/SD.jpg"> &nbsp;
-                <strong>Axigma</strong> &nbsp;Agosto 2021
-              </div>
-            </div>
-          </div>
+          <img [src]="cursos.imag"> &nbsp;&nbsp;
+          <strong>{{cursos.dado}}</strong> &nbsp;{{cursos.fecha}}
         </div>
-        </div><br/><br/><br/>
-        </section>
+      </div>
+    </div>
+  </div>
+</section><br>

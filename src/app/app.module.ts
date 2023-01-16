@@ -1,43 +1,42 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { ModalComponent } from './components/modal/modal.component';
-import { RedesComponent } from './components/redes/redes.component';
-import { BannerComponent } from './components/banner/banner.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
+import { PortfolioService } from './servicios/portfolio.service';
+import { HttpClientModule } from '@angular/common/http';
+import { BannerComponent } from './components/banner/banner.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { RedesComponent } from './components/redes/redes.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PageitemComponent } from './components/pageitem/pageitem.component';
-import { PortfolioService } from './servicios/portfolio.service';
-import { FormsModule } from '@angular/forms';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    ModalComponent,
-    RedesComponent,
-    BannerComponent,
     AboutmeComponent,
+    BannerComponent,
+    NavbarComponent,
     ExperienciaComponent,
     CursosComponent,
     SkillsComponent,
-    ProyectosComponent,
+    ModalComponent,
+    RedesComponent,
     FooterComponent,
-    PageitemComponent,
+    ProyectosComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
