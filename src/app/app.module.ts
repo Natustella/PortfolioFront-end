@@ -16,6 +16,10 @@ import { ModalComponent } from './components/modal/modal.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { IndexComponent } from './components/index/index.component';
+import { Pag404Component } from './components/pag404/pag404.component';
+import { LoginComponent } from './components/login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -30,13 +34,16 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     RedesComponent,
     FooterComponent,
     ProyectosComponent,
+    IndexComponent,
+    Pag404Component,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

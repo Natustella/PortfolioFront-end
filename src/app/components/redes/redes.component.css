@@ -18,10 +18,6 @@ i.fa-brands.fa-linkedin.fa-xl:hover {
     color: #2828D7;
 }
 
-i.fa-solid.fa-user.fa-xl:hover {
-    color: #CB9A5E;
-}
-
 .list-group {
     --bs-list-group-bg: #dbcfbd;
     --bs-list-group-active-bg: #dbcfbd;

@@ -1,19 +1,11 @@
 <section id="skills" class="skills">
   <h3><strong>Skills</strong></h3>
-  <div class="container-fluid" id="container">
-    <div class="row">
-      <div class="col-4">
-        <div class="progress-circle-container">
-          <div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <ul style="list-style: none;" class="list-group list-group-horizontal-md">
-              <li *ngFor="let skills of skillsList">
-                <div class="progress-circle progress-{{skills.percent}}"><span>{{skills.habilidad}}</span>
-                </div>
-              </li>
-            </ul>
-          </div>
+  <div class="progress-circle-container">
+    <ul style="list-style: none;" class="list-group list-group-horizontal-md">
+      <li *ngFor="let skills of skillsList">
+        <div class="progress-circle progress-{{skills.percent}}"><span>{{skills.habilidad}}</span>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
