@@ -1,5 +1,5 @@
 {   
-	"banner": "./assets/Image/banner.webp",
+	"banner": "./assets/Image/Burbujas.gif",
 
 	"aboutme":{ 
 		"name": "Natalia Herrera",
@@ -67,19 +67,19 @@
 		"habilidad": "GitHub"
 	},
 	{
-		"percent": "82",
+		"percent": "80",
 		"habilidad": "HTML"
 	},
     {
-		"percent": "40",
+		"percent": "70",
 		"habilidad": "MySql"
 	},
 	{
-		"percent": "75",
+		"percent": "60",
 		"habilidad": "CSS"
 	},
 	{
-		"percent": "78",
+		"percent": "40",
 		"habilidad": "TypeScript"	
 	},
 	{
