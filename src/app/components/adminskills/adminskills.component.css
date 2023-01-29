@@ -1,11 +1,3 @@
-/*Este es el CSS de los círculos en general*/
-
-/* @media screen and (min-width:480px) {  
-    #conteiner {
-        border-right: 7px;
-    }
-    } */
-
 .progress-circle {
     position: relative;
     display: inline-block;
@@ -452,3 +444,22 @@
     background-image: linear-gradient(90deg, #CB9A5E 50%, transparent 50%, transparent), linear-gradient(270deg, #CB9A5E 50%, #e7ddcf 50%, #dbcfbd);
 }
 
+.modal-content {
+    background-color: #dbcfbd; 
+}
+
+.btn-secondary {
+    --bs-btn-bg: #dbcfbd;
+    --bs-btn-hover-bg: #CB9A5E;
+    --bs-btn-border-color: #CB9A5E;
+    --bs-btn-color: #141619;   
+    --bs-btn-hover-border-color: #CB9A5E;
+    --bs-btn-active-bg: #CB9A5E;
+    --bs-btn-active-border-color: #CB9A5E;
+    --bs-btn-disabled-bg: #CB9A5E;
+    --bs-btn-disabled-border-color: #CB9A5E;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #141619;
+    --bs-btn-disabled-color: #141619;
+    --bs-btn-hover-color: #141619;
+}
