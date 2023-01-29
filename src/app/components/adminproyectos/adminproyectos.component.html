@@ -1,0 +1,17 @@
+<section id="proyectos" class="proyectos">
+    <div>
+        <h3><strong>Proyectos</strong></h3><br>
+
+  <app-modalproyectos></app-modalproyectos><br>
+
+        <ul style="list-style: none"><br />
+            <li *ngFor="let proyectos of proyectosList">
+                {{proyectos.description}}
+
+                <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i> Modificar</button>&nbsp;
+                <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i> Eliminar</button>
+                
+            </li>
+        </ul>
+    </div><br><br>
+</section>

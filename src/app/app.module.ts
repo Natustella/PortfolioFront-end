@@ -19,6 +19,18 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { IndexComponent } from './components/index/index.component';
 import { Pag404Component } from './components/pag404/pag404.component';
 import { LoginComponent } from './components/login/login.component';
+import { ModalbannerComponent } from './modalesadmin/modalbanner/modalbanner.component';
+import { ModalexperienciaComponent } from './modalesadmin/modalexperiencia/modalexperiencia.component';
+import { ModalcursosComponent } from './modalesadmin/modalcursos/modalcursos.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdmincursosComponent } from './components/admincursos/admincursos.component';
+import { AdminexperienciaComponent } from './components/adminexperiencia/adminexperiencia.component';
+import { ModalskillsComponent } from './modalesadmin/modalskills/modalskills.component';
+import { AdminskillsComponent } from './components/adminskills/adminskills.component';
+import { AdminproyectosComponent } from './components/adminproyectos/adminproyectos.component';
+import { ModalproyectosComponent } from './modalesadmin/modalproyectos/modalproyectos.component';
+import { ModalaboutmeComponent } from './modalesadmin/modalaboutme/modalaboutme.component';
+import { AdminaboutmeComponent } from './components/adminaboutme/adminaboutme.component';
 
 
 @NgModule({
@@ -37,6 +49,18 @@ import { LoginComponent } from './components/login/login.component';
     IndexComponent,
     Pag404Component,
     LoginComponent,
+    ModalbannerComponent,
+    ModalexperienciaComponent,
+    ModalcursosComponent,
+    AdminComponent,
+    AdmincursosComponent,
+    AdminexperienciaComponent,
+    ModalskillsComponent,
+    AdminskillsComponent,
+    AdminproyectosComponent,
+    ModalproyectosComponent,
+    ModalaboutmeComponent,
+    AdminaboutmeComponent,
   ],
   imports: [
     BrowserModule,

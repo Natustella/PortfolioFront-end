@@ -6,25 +6,3 @@
     padding-left: 5px;
 }
 
-h2 {
-    color: #234430;
-}
-
-span {
-  display: block;
-  font-family: monospace;
-  white-space: nowrap;
-  border-right: 4px solid;
-  width: 33ch;
-  animation: typing 2s steps(32),
-  blink .5s infinite step-end alternate;
-  overflow: hidden;
-}
-
-@keyframes typing {
-    from { width: 0;}
-}
-
-@keyframes blink {
-    50% { border-color: transparent;}
-}

@@ -1,0 +1,35 @@
+<section id="experiencia" class="experiencia">
+    <div>
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+        aria-expanded="true">
+        <h3><strong>Experiencia</strong></h3> &nbsp; &nbsp;<i class="fa-solid fa-sort"></i>
+        <br>
+      </button><br>
+  
+      <app-modalexperiencia></app-modalexperiencia><br><br>
+  
+    </div>
+    <br>
+    <div class="experiencia">
+      <div *ngFor="let experiencia of experienciaList" class="accordion-item">
+        <h6>
+          <strong>{{experiencia.pos}}</strong> &nbsp; &nbsp;
+        </h6>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <br>
+            <img [src]="experiencia.logo"> &nbsp;
+            <strong>{{experiencia.empresa}}</strong> &nbsp;{{experiencia.desde}} - {{experiencia.hasta}}
+            <br>
+            <br>
+            <p>{{experiencia.actividad}}</p>
+  
+            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i> Modificar</button>&nbsp;
+            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i> Eliminar</button>
+            <br><br><br>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><br>
