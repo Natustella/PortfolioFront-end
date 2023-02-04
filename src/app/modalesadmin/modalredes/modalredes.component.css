@@ -1,3 +1,4 @@
+
 .btn-primary {
     --bs-btn-bg: #dbcfbd;
     --bs-btn-hover-bg: #CB9A5E;
@@ -12,9 +13,6 @@
     --bs-btn-active-color: #141619;
     --bs-btn-disabled-color: #141619;
     --bs-btn-hover-color: #141619;
-}
-.modal-content {
-    background-color: #dbcfbd; 
 }
 
 .btn-secondary {
@@ -33,15 +31,11 @@
     --bs-btn-hover-color: #141619;
 }
 
-.alert-danger{
-    border-color: #e7a350 ;
-  }
+.modal-footer {
+    background-color: #dbcfbd;
+}
 
- p {
+p {
     color: #963b1d;
     font-weight: bold;
-  }
-
-  .btn:disabled {
-    background-color: #e7a350;
   }

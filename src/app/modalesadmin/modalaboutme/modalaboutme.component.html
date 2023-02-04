@@ -1,27 +1,55 @@
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutmeModal">
-    Modificar Datos
-</button>&nbsp;
+<br><br>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutModal">
+    Modificar Descripción
+</button><br><br>
 
+<button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>&nbsp;
+<button type="button" class="btn btn-primary">Guardar</button>
+<br><br>
 
-<div class="modal fade" id="aboutmeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <label for="recipient-name" class="col-form-label">name</label>
-                <input type="text" class="form-control" id="recipient-name"><br>
-                <label for="recipient-name" class="col-form-label">position</label>
-                <input type="text" class="form-control" id="recipient-name"><br>
-                <label for="recipient-name" class="col-form-label">ubicacion</label>
-                <input type="text" class="form-control" id="recipient-name"><br>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
-
+      <div class="modal-content">
+  
+        <form (ngSubmit)="onSubmit()" [formGroup]="aboutForm">
+  
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+  
+            <div class="mb-3">
+  
+              <label for="message-text" class="col-form-label">Descripción</label>
+              <textarea id="descripcion" name="descripcion" type="textarea" class="form-control" required formControlName="descripcion"></textarea>
+  
+              <div *ngIf="aboutForm.get('descripcion')?.touched && aboutForm.get('descripcion')?.errors?.['required']">
+              <p>Este campo es requerido</p>
+              </div>
+  
+              <div *ngIf="aboutForm.get('descripcion')?.touched && aboutForm.get('descripcion')?.errors?.['minlength']"
+              class="alert-danger">
+              <p>Este campo debe tener al menos {{
+              aboutForm.get('descripcion')?.errors?.['minlength']?.requiredLength}} caracteres</p>
+          </div>
+  
+            </div>
+        </div>
+  
+      </form>
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-guarning fw-bold" [disabled]="aboutForm.invalid">Guardar</button>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+
+
+  <!-- <button type="button" class="btn btn-secondary">
+    <label for="message-text" class="col-form-label">Modificar Descripción</label>
+  <textarea class="form-control" id="message-text"></textarea>
+  </button><br><br>
+  <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i> Eliminar</button>&nbsp;
+  <button type="button" class="btn btn-primary">Guardar</button> -->

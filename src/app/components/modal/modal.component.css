@@ -56,3 +56,16 @@ button.btn.btn-primary {
 a {
     color: #010101;
 }
+
+
+.error{
+    color:#271503;
+  }
+  
+  .border-error{
+    border-color: #e7a350 ;
+  }
+
+  .btn:disabled {
+    background-color: #e7a350;
+  }

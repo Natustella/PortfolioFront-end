@@ -1,26 +1,42 @@
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i
-    class="fa-solid fa-pen"></i>
-Nuevo Skills
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#proyectosModal">
+  Nuevo Proyecto
 </button>
 
 <div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="proyectoForm">
+
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+          <div class="mb-3">
+
+            <label for="message-text" class="col-form-label">Descripción</label>
+            <textarea id="descripcion" name="descripcion" type="textarea" class="form-control" required formControlName="descripcion"></textarea>
+
+            <div *ngIf="proyectoForm.get('descripcion')?.touched && proyectoForm.get('descripcion')?.errors?.['required']">
+            <p>Este campo es requerido</p>
+            </div>
+
+            <div *ngIf="proyectoForm.get('descripcion')?.touched && proyectoForm.get('descripcion')?.errors?.['minlength']"
+            class="alert-danger">
+            <p>Este campo debe tener al menos {{
+            proyectoForm.get('descripcion')?.errors?.['minlength']?.requiredLength}} caracteres</p>
         </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-                <label for="message-text" class="col-form-label">descripción</label>
-                <textarea class="form-control" id="message-text"></textarea>
-              </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
-        </div>
+
+          </div>
+      </div>
+
+    </form>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-guarning fw-bold" [disabled]="proyectoForm.invalid">Guardar</button>
       </div>
     </div>
   </div>
+</div>

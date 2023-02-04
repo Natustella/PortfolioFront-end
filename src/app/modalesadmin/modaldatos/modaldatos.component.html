@@ -1,0 +1,52 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#datosModal">
+    Modificar Datos
+</button>&nbsp;
+
+
+<div class="modal fade" id="datosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="datosForm">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <label for="recipient-name" class="col-form-label">Nombre</label>
+                <input id="nombre" name="name" type="name" class="form-control" required formControlName="name"><br>
+
+                <div *ngIf="datosForm.get('name')?.touched && datosForm.get('name')?.errors?.['required']"
+                class="alert-danger">
+                <p>Este campo es requerido</p>
+                </div>
+
+
+                <label for="recipient-position" class="col-form-label">Posición</label>
+                <input id="position" name="position" type="text" class="form-control" required formControlName="position"><br>
+                <div *ngIf="datosForm.get('position')?.touched && datosForm.get('position')?.errors?.['required']"
+                class="alert-danger">
+                <p>Este campo es requerido</p>
+                </div>
+
+
+                <label for="recipient-ubicacion" class="col-form-label">Ubicación</label>
+                <input id="ubicacion" name="ubicacion" type="text" class="form-control" required formControlName="ubicacion"><br>
+                <div *ngIf="datosForm.get('ubicacion')?.touched && datosForm.get('ubicacion')?.errors?.['required']"
+                class="alert-danger">
+                <p>Este campo es requerido</p>
+                </div>
+
+            </div>
+
+      </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-guarning fw-bold" [disabled]="datosForm.invalid">Guardar</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

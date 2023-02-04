@@ -5,15 +5,11 @@
           <img [src]="aboutme.imgMe" class="rounded-circle" alt="about me" title="yo"
             id="miFoto">
 
-            <button type="button" class="btn btn-secondary">
-                <input class="form-control form-control-sm" id="formFileSm" type="file">Modificar
-            </button><br><br>
-            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i> Eliminar</button>&nbsp;
-            <button type="button" class="btn btn-primary">Guardar</button>
-            <br><br>
-
+            <app-modalfoto></app-modalfoto>
 
         </div>
+
+
         <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 mt-4">
           <ul style="list-style:none" class="titulo">
             <li>
@@ -26,20 +22,17 @@
               <h6><strong>{{aboutme.ubicacion}}</strong></h6>
             </li><br><br>
 
-            <app-modalaboutme></app-modalaboutme><br><br>
-            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i> Eliminar</button>
+            <app-modaldatos></app-modaldatos><br><br>
 
+            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-secondary">Guardar</button>
           </ul>
         </div>
         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 mt-3">
-          <h5>{{aboutme.sobreMi}}</h5><br>
+          <h5>{{aboutme.sobreMi}}</h5>
 
-          <button type="button" class="btn btn-secondary">
-            <label for="message-text" class="col-form-label">Modificar Descripción</label>
-          <textarea class="form-control" id="message-text"></textarea>
-          </button><br><br>
-          <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i> Eliminar</button>&nbsp;
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <app-modalaboutme></app-modalaboutme><br><br>
+
 
         </div>
       </div>

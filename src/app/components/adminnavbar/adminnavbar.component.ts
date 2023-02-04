@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
-  selector: 'app-redes',
-  templateUrl: './redes.component.html',
-  styleUrls: ['./redes.component.css']
+  selector: 'app-adminnavbar',
+  templateUrl: './adminnavbar.component.html',
+  styleUrls: ['./adminnavbar.component.css']
 })
-export class RedesComponent implements OnInit {
+export class AdminnavbarComponent implements OnInit {
   miPortfolio: any;
   redesList: any = []
   constructor(private datosPortfolio: PortfolioService) { }

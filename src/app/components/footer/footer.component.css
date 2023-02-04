@@ -40,3 +40,13 @@ p {
         font-size: small;
         box-shadow: 2px -2px 5px;
 }
+
+.btn:disabled {
+    background-color: #dbcfbd;
+    border-color: #CB9A5E;
+  }
+
+.btn-primary[_ngcontent-shr-c71] {
+    --bs-btn-bg: #dbcfbd;
+    --bs-btn-hover-bg: #dbcfbd;
+}
