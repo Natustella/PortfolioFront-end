@@ -1,0 +1,42 @@
+<br><br>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fotoModal">
+    Modificar Foto
+</button><br><br>
+
+<button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>&nbsp;
+<button type="button" class="btn btn-primary">Guardar</button>
+<br><br>
+
+<div class="modal fade" id="fotoModal" tabindex="-1" aria-labelledby="fotoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+           <form (ngSubmit)="onSubmit()" [formGroup]="fotoForm">
+
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <button type="button" class="btn btn-secondary">
+                    <input class="form-control form-control-sm" id="formFileSm" type="file" required formControlName="foto">
+                </button>
+
+              <div *ngIf="fotoForm.get('foto')?.touched && fotoForm.get('foto')?.errors?.['required']">
+                <p>Para poder guardar debe seleccionar una nueva foto</p>
+                </div> 
+
+            </div>
+
+            </form> 
+
+          <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-guarning fw-bold" [disabled]="fotoForm.invalid">Guardar</button>
+            </div> 
+
+        </div>
+    </div>
+</div><br><br><br>
+

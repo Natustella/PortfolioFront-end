@@ -6,26 +6,52 @@
 <div class="modal fade" id="cursosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
+
+          <form (ngSubmit)="onSubmit()" [formGroup]="cursosForm"> 
+
+
             <div class="modal-header">
-
-                
-                <label for="recipient-name" class="col-form-label">titulo</label>
-                <input type="text" class="form-control" id="recipient-name"> 
-
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
             <div class="modal-body">
+
+                <label for="recipient-name" class="col-form-label">Titulo</label>
+                <input id="titulo" name="titulo" type="text" class="form-control" requerid formControlName="titulo"><br>
+
+                <div *ngIf="cursosForm.get('titulo')?.touched && cursosForm.get('titulo')?.errors?.['required']">
+                    <p>Este campo es requerido</p>
+                </div>
+
+
                 <button type="button" class="btn btn-secondary">
-                    <input class="form-control form-control-sm" id="formFileSm" type="file">imag
+                    <input class="form-control form-control-sm" id="formFileSm" type="file">Imag
                 </button><br>
-                <label for="recipient-name" class="col-form-label">dado</label>
-                <input type="text" class="form-control" id="recipient-name"><br>
-                <label for="recipient-name" class="col-form-label">fecha</label>
-                <input type="text" class="form-control" id="recipient-name"><br>
+
+
+                <label for="recipient-name" class="col-form-label">Dado por</label>
+                <input id="dado" name="dado" type="text" class="form-control" requerid formControlName="dado"><br>
+
+                <div *ngIf="cursosForm.get('dado')?.touched && cursosForm.get('dado')?.errors?.['required']"
+                class="alert-danger">
+                    <p>Este campo es requerido</p>
+                </div>
+
+                <label for="recipient-name" class="col-form-label">Fecha</label>
+                <input id="fecha" name="fecha" type="text" class="form-control" requerid formControlName="fecha"><br>
+
+                <div *ngIf="cursosForm.get('fecha')?.touched && cursosForm.get('fecha')?.errors?.['required']"
+                class="alert-danger">
+                    <p>Este campo es requerido</p>
+                </div>
+
             </div>
+
+        </form> 
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-guarning fw-bold" [disabled]="cursosForm.invalid">Guardar</button>
             </div>
 
         </div>

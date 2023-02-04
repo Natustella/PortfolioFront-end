@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { PortfolioService } from './servicios/portfolio.service';
@@ -31,6 +31,11 @@ import { AdminproyectosComponent } from './components/adminproyectos/adminproyec
 import { ModalproyectosComponent } from './modalesadmin/modalproyectos/modalproyectos.component';
 import { ModalaboutmeComponent } from './modalesadmin/modalaboutme/modalaboutme.component';
 import { AdminaboutmeComponent } from './components/adminaboutme/adminaboutme.component';
+import { AdminnavbarComponent } from './components/adminnavbar/adminnavbar.component';
+import { AdminlogoutComponent } from './components/adminlogout/adminlogout.component';
+import { ModalredesComponent } from './modalesadmin/modalredes/modalredes.component';
+import { ModalfotoComponent } from './modalesadmin/modalfoto/modalfoto.component';
+import { ModaldatosComponent } from './modalesadmin/modaldatos/modaldatos.component';
 
 
 @NgModule({
@@ -61,6 +66,11 @@ import { AdminaboutmeComponent } from './components/adminaboutme/adminaboutme.co
     ModalproyectosComponent,
     ModalaboutmeComponent,
     AdminaboutmeComponent,
+    AdminnavbarComponent,
+    AdminlogoutComponent,
+    ModalredesComponent,
+    ModalfotoComponent,
+    ModaldatosComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,26 @@
 {   
 	"banner": "./assets/Image/Burbujas.gif",
-
+	"redes": [
+		{
+			"url": "https://www.linkedin.com/in/natustella/",
+			"icoFont": "fa-brands fa-linkedin fa-xl"
+		},
+		{
+			"url": "https://github.com/Natustella",
+			"icoFont": "fa-brands fa-github"
+		},
+		{
+			"url": "https://www.instagram.com/natustella2020/",
+			"icoFont": "fa-brands fa-instagram fa-xl"
+		},
+		{
+			"url": "https://twitter.com/natustella/",
+			"icoFont": "fa-brands fa-twitter"
+		}
+	],
 	"aboutme":{ 
 		"name": "Natalia Herrera",
-	    "position": "Funcional SAP Sr. - Fullstack Developer Jr.",
+	    "position": "Sr. SAP Functional Analyst - Jr. Fullstack Developer ",
 	    "ubicacion": "Córdoba-Argentina",
         "imgMe": "./assets/Image/me.jpg",
 		"sobreMi": "Hola, soy analista funcional de SAP, me especializo en algunos módulos de SAP R3 e ISU. Estoy incurcionando ahora en el mundo de la programación. Me encantan los desafíos y el diseño. Espero poder crecer técnica y profesionalmente."

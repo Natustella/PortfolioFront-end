@@ -33,3 +33,8 @@
     --bs-btn-disabled-color: #141619;
     --bs-btn-hover-color: #141619;
 }
+
+p {
+    color: #963b1d;
+    font-weight: bold;
+  }

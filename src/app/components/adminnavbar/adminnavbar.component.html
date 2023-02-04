@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-secondary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank">
+            <img src="assets/Image/logo ArgentinaPrograma.png" alt="Logo" width="20%" height="auto"
+                class="d-inline-block align-text-top">
+            #Yo Programo
+        </a>
+        
+        <ul class="list-group list-group-vertical">
+
+            <li *ngFor="let red of redesList" class="list-group-item">
+              <a [href]="red.url" target="_blank" rel="noopener noreferrer" class="home__social-link">
+                <i [ngClass]="red.icoFont"></i>
+              </a>&nbsp;&nbsp;
+
+              <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>&nbsp;
+              <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>&nbsp;&nbsp;
+              <button type="button" class="btn btn-secondary">Guardar</button>
+
+            </li>
+        </ul>
+        
+        
+            <!-- Button logout -->
+         <ul ul style="list-style: none" class= "list-group list-group-horizontal" >
+
+          <app-modalredes></app-modalredes>
+
+          <li class="list-group-item">
+          
+              <app-adminlogout></app-adminlogout>
+          
+          </li>
+        </ul>
+
+
+
+    </div>
+</nav>

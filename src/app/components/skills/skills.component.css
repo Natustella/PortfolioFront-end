@@ -1,8 +1,8 @@
 /*Este es el CSS de los círculos en general*/
 
-/* @media screen and (min-width:480px) {  
+/* @media screen and (max-width:480px) {  
     #conteiner {
-        border-right: 7px;
+        border-right: 80%;
     }
     } */
 
