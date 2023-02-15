@@ -19,7 +19,7 @@
             <div class="modal-body">
                 <button type="button" class="btn btn-secondary">
                     <input class="form-control form-control-sm" id="formFileSm" type="file" required formControlName="banner">
-                </button>
+                </button><br>
 
                 <div *ngIf="bannerForm.get('banner')?.touched && bannerForm.get('banner')?.errors?.['required']">
                 <p>Para poder guardar debe seleccionar un nuevo Banner</p>

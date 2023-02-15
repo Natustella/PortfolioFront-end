@@ -35,6 +35,9 @@
 }
 
 p {
+    text-align: center;
+    font-size: small;
+    box-shadow: 2px -2px 5px;
     color: #963b1d;
     font-weight: bold;
-  }
+}
