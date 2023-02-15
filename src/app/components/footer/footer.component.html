@@ -14,11 +14,11 @@
                     </div>
                     <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']"
                         class="alert-danger">
-                        Este campo es requerido
+                        <p>Este campo es requerido</p>
                     </div>
                     <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['email']"
                         class="alert-danger">
-                        El formato debe ser válido
+                        <p>El formato debe ser válido</p>
                     </div>
 
                     <div class="mb-3">
@@ -27,11 +27,11 @@
                     </div>
                     <div *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors?.['required']"
                         class="alert-danger">
-                        Este campo es requerido
+                        <p>Este campo es requerido</p>
                     </div>
                     <div *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors?.['pattern']"
                         class="alert-danger">
-                        Debe colocar su teléfono
+                        <p>Debe colocar su teléfono</p>
                     </div>
 
                     <div class="mb-3">
@@ -41,12 +41,12 @@
 
                     <div *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['required']"
                         class="alert-danger">
-                        Este campo es requerido
+                        <p>Este campo es requerido</p>
                     </div>
                     <div *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['minlength']"
                         class="alert-danger">
-                        Este campo debe tener al menos {{
-                        contactForm.get('message')?.errors?.['minlength']?.requiredLength}} caracteres
+                        <p>Este campo debe tener al menos {{
+                        contactForm.get('message')?.errors?.['minlength']?.requiredLength}} caracteres</p>
                     </div>
 
                 </form>
