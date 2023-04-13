@@ -80,6 +80,7 @@ import { ModaldatosComponent } from './modalesadmin/modaldatos/modaldatos.compon
     ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }

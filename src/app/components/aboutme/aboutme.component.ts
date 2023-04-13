@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Mpersona } from 'src/app/model/mpersona';
+import { MpersonaService } from 'src/app/servicios/mpersona.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 
@@ -8,13 +10,16 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./aboutme.component.css']
 })
 export class AboutmeComponent implements OnInit{
-  miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) {}
+persona: Mpersona = new Mpersona(" "," "," "," "," ");
+  constructor(public spersona:MpersonaService) {}
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.miPortfolio=data;
-  })
-}
-}
+
+    this.cargarPersona();
+  }
+  cargarPersona():void{
+    this.spersona.detail(1).subscribe(data => 
+      {this.persona=data});
+  }
+  }
+

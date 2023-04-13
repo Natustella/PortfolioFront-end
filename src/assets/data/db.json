@@ -24,10 +24,10 @@
 	],
 	"aboutme":{ 
 		"name": "Natalia Herrera",
-	    "position": "Sr. SAP Functional Analyst - Jr. Fullstack Developer ",
+	    "position": "Sr. SAP Functional Analyst - Jr. Fullstack Developer",
 	    "ubicacion": "Córdoba-Argentina",
         "imgMe": "./assets/Image/me.jpg",
-		"sobreMi": "Hola, soy analista funcional de SAP, me especializo en algunos módulos de R3 e ISU. Ahora estoy incurcionando en el mundo de la programación. Me encantan los desafíos y el diseño. Espero poder crecer técnica y profesionalmente."
+		"sobreMi": "Hola, soy analista funcional de SAP, me especializo en algunos módulos de R3 e ISU. Ahora estoy incursionando en el mundo de la programación. Me encantan los desafíos y el diseño. Espero poder crecer técnica y profesionalmente."
 	},
 
 	"experiencia": [{
@@ -55,7 +55,7 @@
 	    "empresa": "ECOGAS",
 	    "desde": "Noviembre 2010",
 	    "hasta": "Abril 2018",
-	    "actividad": "Recepción, análisis y respuesta de reclamos comerciales de clientes.Referente de sector de análisis Región Cuyana.Armado de informes para ENARGAS (Ente Nacional de Regulación del Gas) y respuestas de auditorías. Procesos de facturación y refacturación de clientes. Capacitaciones internas. Confección de plantillas para respuestas a reclamos."
+	    "actividad": "Recepción, análisis y respuesta de reclamos comerciales de clientes. Referente de sector de análisis Región Cuyana. Armado de informes para ENARGAS (Ente Nacional de Regulación del Gas) y respuestas de auditorías. Procesos de facturación y refacturación de clientes. Capacitaciones internas. Confección de plantillas para respuestas a reclamos."
 
 	},
 	{
@@ -92,43 +92,43 @@
 
 	"skills": [{
 		"id": "1",
-		"percent": "60",
-		"habilidad": "GitHub"
-	},
-	{
-		"id": "2",
 		"percent": "80",
 		"habilidad": "HTML"
 	},
+	{
+		"id": "2",
+		"percent": "60",
+		"habilidad": "CSS"	
+	},
     {
 		"id": "3",
-		"percent": "70",
+		"percent": "85",
 		"habilidad": "MySql"
 	},
 	{
 		"id": "4",
-		"percent": "60",
-		"habilidad": "CSS"
+		"percent": "65",
+		"habilidad": "JAVA"
 	},
 	{
 		"id": "5",
-		"percent": "40",
+		"percent": "55",
 		"habilidad": "TypeScript"	
 	},
 	{
 		"id": "6",
-		"percent": "79",
+		"percent": "95",
 		"habilidad": "Angular"	
 	},
 	{
 		"id": "7",
-		"percent": "81",
-		"habilidad": "Bootstrap"	
+		"percent": "95",
+		"habilidad": "SAP"	
 	},
 	{
 		"id": "8",
-		"percent": "95",
-		"habilidad": "SAP"	
+		"percent": "75",
+		"habilidad": "JSON"
 	}],
 
 	"proyectos": [{
