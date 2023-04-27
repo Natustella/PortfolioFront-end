@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 import { AppComponent } from './app.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
@@ -19,7 +21,6 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { IndexComponent } from './components/index/index.component';
 import { Pag404Component } from './components/pag404/pag404.component';
 import { LoginComponent } from './components/login/login.component';
-import { ModalbannerComponent } from './modalesadmin/modalbanner/modalbanner.component';
 import { ModalexperienciaComponent } from './modalesadmin/modalexperiencia/modalexperiencia.component';
 import { ModalcursosComponent } from './modalesadmin/modalcursos/modalcursos.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -29,14 +30,23 @@ import { ModalskillsComponent } from './modalesadmin/modalskills/modalskills.com
 import { AdminskillsComponent } from './components/adminskills/adminskills.component';
 import { AdminproyectosComponent } from './components/adminproyectos/adminproyectos.component';
 import { ModalproyectosComponent } from './modalesadmin/modalproyectos/modalproyectos.component';
-import { ModalaboutmeComponent } from './modalesadmin/modalaboutme/modalaboutme.component';
 import { AdminaboutmeComponent } from './components/adminaboutme/adminaboutme.component';
 import { AdminnavbarComponent } from './components/adminnavbar/adminnavbar.component';
 import { AdminlogoutComponent } from './components/adminlogout/adminlogout.component';
 import { ModalredesComponent } from './modalesadmin/modalredes/modalredes.component';
-import { ModalfotoComponent } from './modalesadmin/modalfoto/modalfoto.component';
 import { ModaldatosComponent } from './modalesadmin/modaldatos/modaldatos.component';
 
+const firebaseConfig = {
+  apiKey: "AIzaSyCqAQn5-qPH7SnsLIDeqXw2cWwIGQ3OSq8",
+  authDomain: "portfolio-eb2dc.firebaseapp.com",
+  projectId: "portfolio-eb2dc",
+  storageBucket: "portfolio-eb2dc.appspot.com",
+  messagingSenderId: "188379008734",
+  appId: "1:188379008734:web:529d6657a325f791be3c4f",
+  measurementId: "G-0XGHK9H7JN"
+};
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 @NgModule({
   declarations: [
@@ -54,7 +64,6 @@ import { ModaldatosComponent } from './modalesadmin/modaldatos/modaldatos.compon
     IndexComponent,
     Pag404Component,
     LoginComponent,
-    ModalbannerComponent,
     ModalexperienciaComponent,
     ModalcursosComponent,
     AdminComponent,
@@ -64,12 +73,10 @@ import { ModaldatosComponent } from './modalesadmin/modaldatos/modaldatos.compon
     AdminskillsComponent,
     AdminproyectosComponent,
     ModalproyectosComponent,
-    ModalaboutmeComponent,
     AdminaboutmeComponent,
     AdminnavbarComponent,
     AdminlogoutComponent,
     ModalredesComponent,
-    ModalfotoComponent,
     ModaldatosComponent,
   ],
   imports: [

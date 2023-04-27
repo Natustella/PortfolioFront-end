@@ -11,7 +11,7 @@
   </div>
   <br>
   <div class="experiencia">
-    <div *ngFor="let experiencia of experienciaList" class="accordion-item">
+    <div *ngFor="let experiencia of experiencias" class="accordion-item">
       <h6>
         <strong>{{experiencia.pos}}</strong> &nbsp; &nbsp;
       </h6>
@@ -24,10 +24,13 @@
           <br>
           <p>{{experiencia.actividad}}</p>
 
-          <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>&nbsp;
-          <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>&nbsp;&nbsp;
-          <button type="button" class="btn btn-secondary">Guardar</button>          <br><br><br>
-
+          <button type="button" class="btn btn-secondary">
+            <i class="fa-solid fa-pen" *ngIf="experiencia.id !== undefined" (click)="idEdit(experiencia.id)"></i>
+          </button>&nbsp;
+          <button type="button" class="btn btn-secondary">
+            <i class="fa-solid fa-x" *ngIf="experiencia.id !== undefined" (click)="delete(experiencia.id)"></i>
+          </button>&nbsp;&nbsp;    
+          <br><br><br>
         </div>
       </div>
     </div>

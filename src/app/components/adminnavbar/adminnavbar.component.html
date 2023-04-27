@@ -7,18 +7,20 @@
         </a>
         
         <ul class="list-group list-group-vertical">
-
-            <li *ngFor="let red of redesList" class="list-group-item">
+            <li *ngFor="let red of redes" class="list-group-item">
               <a [href]="red.url" target="_blank" rel="noopener noreferrer" class="home__social-link">
                 <i [ngClass]="red.icoFont"></i>
               </a>&nbsp;&nbsp;
-
-              <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>&nbsp;
-              <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>&nbsp;&nbsp;
-              <button type="button" class="btn btn-secondary">Guardar</button>
-
+          
+              <button type="button" class="btn btn-secondary">
+                <i class="fa-solid fa-pen" *ngIf="red.id" (click)="idEdit(red.id)"></i>
+              </button>&nbsp;
+              <button type="button" class="btn btn-secondary" *ngIf="red.id" (click)="delete(red.id)">
+                <i class="fa-solid fa-x"></i>
+              </button>&nbsp;&nbsp;
             </li>
-        </ul>
+          </ul>
+          
         
         
             <!-- Button logout -->

@@ -133,10 +133,10 @@
 
 	"proyectos": [{
 		"id": "1",
-		"description": "Participación de proyecto de implementación de SAP."
+		"descripcion": "Participación de proyecto de implementación de SAP."
 	},
 	{
 		"id": "2",
-		"description": "Creación de Portfolio."
+		"descripcion": "Creación de Portfolio."
 	}]
 }

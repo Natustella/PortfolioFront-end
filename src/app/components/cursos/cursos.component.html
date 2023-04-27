@@ -8,15 +8,15 @@
   </div>
   <br>
   <div class="cursos">
-    <div *ngFor="let cursos of cursosList" class="accordion-item">
+    <div *ngFor="let curso of curso" class="accordion-item">
       <h6>
-        <strong>{{cursos.titulo}}</strong> &nbsp; &nbsp;
+        <strong>{{curso.titulo}}</strong> &nbsp; &nbsp;
       </h6>
       <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <br>
-          <img [src]="cursos.imag"> &nbsp;&nbsp;
-          <strong>{{cursos.dado}}</strong> &nbsp;{{cursos.fecha}}
+          <img [src]="curso.imag"> &nbsp;&nbsp;
+          <strong>{{curso.dado}}</strong> &nbsp;{{curso.fecha}}
         </div>
       </div>
     </div>

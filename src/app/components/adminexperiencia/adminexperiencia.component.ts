@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Experiencia } from 'src/app/model/experiencia';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -7,12 +9,36 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./adminexperiencia.component.css']
 })
 export class AdminexperienciaComponent implements OnInit{
-  experienciaList:any
-  constructor(private datosPortfolio:PortfolioService) {}
+  experiencias: Experiencia[] = []; 
+  idEditar: number | undefined;
+  isTrue: Boolean = false;
+
+  constructor(public sexperiencia:ExperienciaService) {}
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.experienciaList=data.experiencia;
-  })
-}
-}
+
+    this.cargarExperiencia();
+  }
+  cargarExperiencia():void{
+    this.sexperiencia.lista().subscribe(data => 
+      {this.experiencias=data});
+  }
+
+  idEdit(id:number): void{
+    this.isTrue = true;
+    this.idEditar = id;
+  }
+
+  delete(id:number){
+    if(id != undefined){
+      this.sexperiencia.delete(id).subscribe(data =>{
+        this.cargarExperiencia();
+      }, err =>{
+        alert("No se pudo eliminar la experiencia")
+      }) 
+    }
+  }
+  }
+  
+
+

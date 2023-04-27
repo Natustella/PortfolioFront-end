@@ -10,7 +10,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit{
-  experiencia: Experiencia[] = []; 
+  experiencias: Experiencia[] = []; 
   constructor(public sexperiencia:ExperienciaService) {}
 
   ngOnInit(): void {
@@ -19,6 +19,6 @@ export class ExperienciaComponent implements OnInit{
   }
   cargarExperiencia():void{
     this.sexperiencia.lista().subscribe(data => 
-      {this.experiencia=data});
+      {this.experiencias=data});
   }
 }

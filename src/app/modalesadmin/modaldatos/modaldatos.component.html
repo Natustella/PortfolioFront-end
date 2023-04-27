@@ -1,52 +1,71 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#datosModal">
-    Modificar Datos
+    Modificar Datos Personales
 </button>&nbsp;
+
+<button type="button" class="btn btn-secondary" *ngIf="personaData.id" (click)="delete(personaData.id)">Eliminar Datos Personales</button>&nbsp;
 
 
 <div class="modal fade" id="datosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
 
-      <form (ngSubmit)="onSubmit()" [formGroup]="datosForm">
+      <form [formGroup]="form" (ngSubmit)="form.valid && onCreate()" name="personaForm">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <div class="modal-body">
-                <label for="recipient-name" class="col-form-label">Nombre</label>
-                <input id="nombre" name="name" type="name" class="form-control" required formControlName="name"><br>
 
-                <div *ngIf="datosForm.get('name')?.touched && datosForm.get('name')?.errors?.['required']"
+                <label for="recipient-name" class="col-form-label">Foto</label>
+                <input id="foto" name="foto" type="foto" class="form-control" required formControlName="foto" [(ngModel)]="imgMe"><br>
+
+                <label for="recipient-name" class="col-form-label">Nombre</label>
+                <input id="nombre" name="name" type="name" class="form-control" required formControlName="name" [(ngModel)]="nombre"><br>
+
+                <div *ngIf="form.get('name')?.touched && form.get('name')?.errors?.['required']"
                 class="alert-danger">
                 <p>Este campo es requerido</p>
                 </div>
 
 
                 <label for="recipient-position" class="col-form-label">Posición</label>
-                <input id="position" name="position" type="text" class="form-control" required formControlName="position"><br>
-                <div *ngIf="datosForm.get('position')?.touched && datosForm.get('position')?.errors?.['required']"
+                <input id="position" name="position" type="text" class="form-control" required formControlName="position" [(ngModel)]="position"><br>
+                <div *ngIf="form.get('position')?.touched && form.get('position')?.errors?.['required']"
                 class="alert-danger">
                 <p>Este campo es requerido</p>
                 </div>
 
 
                 <label for="recipient-ubicacion" class="col-form-label">Ubicación</label>
-                <input id="ubicacion" name="ubicacion" type="text" class="form-control" required formControlName="ubicacion"><br>
-                <div *ngIf="datosForm.get('ubicacion')?.touched && datosForm.get('ubicacion')?.errors?.['required']"
+                <input id="ubicacion" name="ubicacion" type="text" class="form-control" required formControlName="ubicacion" [(ngModel)]="ubicacion"><br>
+                <div *ngIf="form.get('ubicacion')?.touched && form.get('ubicacion')?.errors?.['required']"
                 class="alert-danger">
                 <p>Este campo es requerido</p>
                 </div>
 
+                  
+              <label for="message-text" class="col-form-label">Descripción</label>
+              <textarea id="descripcion" name="descripcion" type="textarea" class="form-control" required formControlName="sobreMi" [(ngModel)]="sobreMi"></textarea>
+  
+              <div *ngIf="form.get('descripcion')?.touched && form.get('descripcion')?.errors?.['required']">
+              <p>Este campo es requerido</p>
+              </div>
+  
+              <div *ngIf="form.get('descripcion')?.touched && form.get('descripcion')?.errors?.['minlength']"
+              class="alert-danger">
+              <p>Este campo debe tener al menos {{
+              form.get('descripcion')?.errors?.['minlength']?.requiredLength}} caracteres</p>
+             </div>
+
             </div>
 
-      </form>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-guarning fw-bold" [disabled]="datosForm.invalid">Guardar</button>
+                <button type="submit" class="btn btn-guarning fw-bold" [disabled]="form.invalid">Guardar</button>
             </div>
+
+        </form>
         </div>
-
-
     </div>
 </div>
 

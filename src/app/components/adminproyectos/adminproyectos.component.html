@@ -5,12 +5,15 @@
         <app-modalproyectos></app-modalproyectos><br>
 
         <ul style="list-style: none"><br />
-            <li *ngFor="let proyectos of proyectosList">
-                {{proyectos.description}}
+            <li *ngFor="let proyecto of proyecto">
+                {{proyecto.descripcion}}
 
-                <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>&nbsp;
-                <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>&nbsp;&nbsp;
-                <button type="button" class="btn btn-secondary">Guardar</button>
+                <button type="button" class="btn btn-secondary">
+                    <i class="fa-solid fa-pen" *ngIf="proyecto.id" (click)="idEdit(proyecto.id)"></i>
+                </button>&nbsp;
+                <button type="button" class="btn btn-secondary">
+                    <i class="fa-solid fa-x" *ngIf="proyecto.id" (click)="delete(proyecto.id)"></i>
+                </button>&nbsp;&nbsp;
             </li>
         </ul>
     </div><br><br>

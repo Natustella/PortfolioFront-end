@@ -17,6 +17,7 @@ persona: Mpersona = new Mpersona(" "," "," "," "," ");
 
     this.cargarPersona();
   }
+  
   cargarPersona():void{
     this.spersona.detail(1).subscribe(data => 
       {this.persona=data});

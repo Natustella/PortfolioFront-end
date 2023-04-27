@@ -6,7 +6,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
 
-        <form (ngSubmit)="onSubmit()" [formGroup]="redesForm">
+        <form [formGroup]="form" (ngSubmit)="form.valid && onCreate()" name="redesForm">
 
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -16,32 +16,32 @@
           
             <div class="mb-3">
               <label for="message-text" class="col-form-label">URL</label>
-              <input id="url" name="url" target="_blank" class="form-control home__social-link" type="href" required formControlName="url">
+              <input id="url" name="url" target="_blank" class="form-control home__social-link" type="href" required formControlName="url" [(ngModel)]="url">
             </div>
 
-            <div *ngIf="redesForm.get('url')?.touched && redesForm.get('url')?.errors?.['required']"
+            <div *ngIf="form.get('url')?.touched && form.get('url')?.errors?.['required']"
             class="alert-danger">
             <p>Este campo es requerido</p>
             </div>
 
             <div class="mb-3">
                 <label for="message-text" class="col-form-label">Icono</label>
-                <input id="icoFont" name="icoFont" class="form-control" type="text" required formControlName="icoFont">
+                <input id="icoFont" name="icoFont" class="form-control" type="text" required formControlName="icoFont" [(ngModel)]="icoFont">
               </div>
 
-              <div *ngIf="redesForm.get('icoFont')?.touched && redesForm.get('icoFont')?.errors?.['required']"
+              <div *ngIf="form.get('icoFont')?.touched && form.get('icoFont')?.errors?.['required']"
               class="alert-danger">
               <p>Este campo es requerido</p>
               </div>
 
         </div>
 
-      </form>
-
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-guarning fw-bold" [disabled]="redesForm.invalid">Guardar</button>
+          <button type="submit" class="btn btn-guarning fw-bold" [disabled]="form.invalid">Guardar</button>
         </div>
+
+      </form>
       </div>
     </div>
   </div>

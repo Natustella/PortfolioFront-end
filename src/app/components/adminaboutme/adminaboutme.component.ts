@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Mpersona } from 'src/app/model/mpersona';
+import { MpersonaService } from 'src/app/servicios/mpersona.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -7,14 +9,34 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./adminaboutme.component.css']
 })
 export class AdminaboutmeComponent implements OnInit{
-  miPortfolio:any;
-aboutme: any;
-  constructor(private datosPortfolio:PortfolioService) {}
+  persona: Mpersona = new Mpersona(" "," "," "," "," ");
+  idEditar: number | undefined;
+  isTrue: Boolean = false;
+
+  constructor(public spersona:MpersonaService) {}
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.aboutme = data.aboutme;
-  })
-}
-}
+
+    this.cargarPersona();
+  }
+  
+  cargarPersona():void{
+    this.spersona.detail(1).subscribe(data => 
+      {this.persona=data});
+  }
+  idEdit(id:number): void{
+    this.isTrue = true;
+    this.idEditar = id;
+  }
+
+  delete(id:number){
+    if(id != undefined){
+      this.spersona.delete(id).subscribe(data =>{
+        this.cargarPersona();
+      }, err =>{
+        alert("no se pudo eliminar la Persona")
+      }) 
+    }
+  }
+  }
+  

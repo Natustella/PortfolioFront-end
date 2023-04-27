@@ -1,5 +1,5 @@
 export class Experiencia {
-    id?: number;
+    id: number | undefined;
     pos: string;
     logo: string;
     empresa: string;
@@ -13,6 +13,6 @@ export class Experiencia {
         this.empresa = empresa;
         this.desde = desde;
         this.hasta = hasta;
-        this.actividad = actividad
+        this.actividad = actividad;
     }
 }

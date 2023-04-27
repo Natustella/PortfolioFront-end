@@ -11,7 +11,7 @@
     </div>
     <br>
     <div class="cursos">
-        <div *ngFor="let cursos of cursosList" class="accordion-item">
+        <div *ngFor="let cursos of curso" class="accordion-item">
             <h6>
                 <strong>{{cursos.titulo}}</strong> &nbsp; &nbsp;
             </h6>
@@ -20,14 +20,16 @@
                     <br>
                     <img [src]="cursos.imag"> &nbsp;&nbsp;
                     <strong>{{cursos.dado}}</strong> &nbsp;{{cursos.fecha}}
-                    <br><br>
-
-                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen"></i></button>&nbsp;
-                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-x"></i></button>&nbsp;&nbsp;
-                    <button type="button" class="btn btn-secondary">Guardar</button>                    <br><br><br>
-
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-secondary">
+                        <i class="fa-solid fa-pen" *ngIf="cursos.id !== undefined" (click)="idEdit(cursos.id)"></i>
+                    </button>&nbsp;
+                    <button type="button" class="btn btn-secondary">
+                        <i class="fa-solid fa-x" *ngIf="cursos.id !== undefined" (click)="delete(cursos.id)"></i>
+                    </button>&nbsp;&nbsp;
                 </div>
+                <br><br>
             </div>
         </div>
     </div>
-</section><br>
+</section><br><br>

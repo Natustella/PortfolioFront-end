@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Curso } from 'src/app/model/curso';
+import { CursoService } from 'src/app/servicios/curso.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -7,12 +9,15 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent implements OnInit{
-  cursosList:any;
-  constructor(private datosPortfolio:PortfolioService) {}
+  curso:Curso[] = [];
+  constructor(public scurso:CursoService) {}
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.cursosList=data.cursos;
-  })
+    this.cargarCurso();
+  }
+  cargarCurso():void{
+    this.scurso.lista().subscribe(data =>
+      {this.curso=data});
+  }
 }
-}
+

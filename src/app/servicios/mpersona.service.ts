@@ -11,26 +11,22 @@ export class MpersonaService {
   constructor(private httpClient:HttpClient) { }
 
   public getPersona(): Observable<Mpersona>{
-    return this.httpClient.get<Mpersona>(this.URL + 'perfil')
+    return this.httpClient.get<Mpersona>(this.URL + 'traer')
   }
 
   public detail(id: number):Observable<Mpersona>{
     return this.httpClient.get<Mpersona>(this.URL + 'perfil');
     }
 
-  public lista():Observable<Mpersona[]>{
-    return this.httpClient.get<Mpersona[]>(this.URL + 'traer');
-  }
-
   public save(persona: Mpersona):Observable<any>{
     return this.httpClient.post<any>(this.URL + 'crear', persona);
   }
 
-  public update(id: number, persona:Mpersona):Observable<any>{
-    return this.httpClient.put<any>(this.URL + `borrar/${id}`, persona);
-  }
+  public delete(id: number):Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
+    }
 
-  public edit(persona: Mpersona):Observable<any>{
-    return this.httpClient.put<any>(this.URL +  '/editar/${id}', persona);
+  public edit(id: number, persona: Mpersona):Observable<any>{
+    return this.httpClient.put<any>(this.URL +  `editar/${id}`, persona);
   }
 }

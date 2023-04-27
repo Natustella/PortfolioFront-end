@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Redes } from 'src/app/model/redes';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { RedesService } from 'src/app/servicios/redes.service';
 
 @Component({
   selector: 'app-redes',
@@ -7,13 +9,15 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./redes.component.css']
 })
 export class RedesComponent implements OnInit {
-  miPortfolio: any;
-  redesList: any = []
-  constructor(private datosPortfolio: PortfolioService) { }
+redes: Redes[] = [];
+  constructor(public sredes:RedesService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.redesList = data.redes;
-    })
+
+    this.cargarRedes();
+  }
+  cargarRedes(): void{
+    this.sredes.lista().subscribe(data =>
+      {this.redes=data});
   }
 }

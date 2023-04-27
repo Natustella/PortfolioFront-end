@@ -16,7 +16,7 @@ export class ExperienciaService {
   }
 
   public detail(id: number):Observable<Experiencia>{
-    return this.httpClient.get<Experiencia>(this.URL + 'detalle');
+    return this.httpClient.get<Experiencia>(this.URL + `detalle/${id}`);
     }
 
   public lista():Observable<Experiencia[]>{
@@ -27,11 +27,11 @@ export class ExperienciaService {
     return this.httpClient.post<any>(this.URL + 'crear', experiencia);
   }
 
-  public update(id: number, experiencia:Experiencia):Observable<any>{
-    return this.httpClient.put<any>(this.URL + `borrar/${id}`, experiencia);
-  }
+  public delete(id: number):Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
+    }
 
-  public edit(experiencia: Experiencia):Observable<any>{
-    return this.httpClient.put<any>(this.URL +  '/editar/${id}', experiencia);
-  }
+  public edit(id: number, experiencia: Experiencia):Observable<any>{
+    return this.httpClient.put<any>(this.URL +  `editar/${id}`, experiencia);
+    }
 }
