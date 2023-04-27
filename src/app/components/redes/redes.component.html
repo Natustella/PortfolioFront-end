@@ -1,0 +1,15 @@
+<ul class="list-group list-group-horizontal">
+
+  <li *ngFor="let red of redes" class="list-group-item">
+    <a [href]="red.url" target="_blank" rel="noopener noreferrer" class="home__social-link">
+      <i [ngClass]="red.icoFont"></i>
+    </a>
+  </li>
+
+  <!-- Button login -->
+  <li class="list-group-item">
+
+    <app-login></app-login>
+
+  </li>
+</ul>

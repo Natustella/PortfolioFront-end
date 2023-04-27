@@ -1,0 +1,47 @@
+<li>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#redesModal">Nueva Red Social</button> &nbsp;&nbsp;
+</li>
+
+<div class="modal fade" id="redesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <form [formGroup]="form" (ngSubmit)="form.valid && onCreate()" name="redesForm">
+
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">URL</label>
+              <input id="url" name="url" target="_blank" class="form-control home__social-link" type="href" required formControlName="url" [(ngModel)]="url">
+            </div>
+
+            <div *ngIf="form.get('url')?.touched && form.get('url')?.errors?.['required']"
+            class="alert-danger">
+            <p>Este campo es requerido</p>
+            </div>
+
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Icono</label>
+                <input id="icoFont" name="icoFont" class="form-control" type="text" required formControlName="icoFont" [(ngModel)]="icoFont">
+              </div>
+
+              <div *ngIf="form.get('icoFont')?.touched && form.get('icoFont')?.errors?.['required']"
+              class="alert-danger">
+              <p>Este campo es requerido</p>
+              </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-guarning fw-bold" [disabled]="form.invalid">Guardar</button>
+        </div>
+
+      </form>
+      </div>
+    </div>
+  </div>

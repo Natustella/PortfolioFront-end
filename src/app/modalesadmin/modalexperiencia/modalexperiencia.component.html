@@ -1,0 +1,72 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experienciaModal">
+    Nueva Experiencia
+</button>&nbsp;
+
+
+<div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <form [formGroup]="form" (ngSubmit)="form.valid && onCreate()" name="experienciaForm">
+
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <label for="recipient-name" class="col-form-label">Posición</label>
+                    <input id="posicion" name="posicion" type="text" class="form-control" required
+                        formControlName="posicion" [(ngModel)]="posicion"><br>
+
+                    <div *ngIf="form.get('posicion')?.touched && form.get('posicion')?.errors?.['required']">
+                        <p>Este campo es requerido</p>
+                    </div>
+
+
+                    <label for="recipient-name" class="col-form-label">Logo</label>
+                    <input id="logo" name="logo" type="text" class="form-control" formControlName="logo" [(ngModel)]="logo"><br>
+
+                    <label for="recipient-name" class="col-form-label">Empresa</label>
+                    <input id="empresa" name="empresa" type="text" class="form-control" required
+                        formControlName="empresa" [(ngModel)]="empresa"><br>
+
+                    <div *ngIf="form.get('empresa')?.touched && form.get('empresa')?.errors?.['required']">
+                        <p>Este campo es requerido</p>
+                    </div>
+
+                    <label for="recipient-name" class="col-form-label">Desde</label>
+                    <input id="desde" name="desde" type="text" class="form-control" required formControlName="desde"
+                        [(ngModel)]="desde"><br>
+
+                    <div *ngIf="form.get('desde')?.touched && form.get('desde')?.errors?.['required']">
+                        <p>Este campo es requerido</p>
+                    </div>
+
+                    <label for="recipient-name" class="col-form-label">Hasta</label>
+                    <input id="hasta" name="hasta" type="text" class="form-control" required formControlName="hasta"
+                        [(ngModel)]="hasta"><br>
+
+                    <div *ngIf="form.get('hasta')?.touched && form.get('hasta')?.errors?.['required']">
+                        <p>Este campo es requerido</p>
+                    </div>
+
+                    <label for="recipient-name" class="col-form-label">Actividad</label>
+                    <input id="actividad" name="actividad" type="text" class="form-control" required
+                        formControlName="actividad" [(ngModel)]="actividad">
+
+                    <div *ngIf="form.get('actividad')?.touched && form.get('actividad')?.errors?.['required']">
+                        <p>Este campo es requerido</p>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-guarning fw-bold">Guardar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

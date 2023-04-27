@@ -1,0 +1,71 @@
+<footer>
+    <!-- Button Contact -->
+    <section id="contacto" class="contacto">
+        <div class="footer-right">
+            <button class="btn btn-primary" type="button">
+                <i class="fa-sharp fa-solid fa-envelope"> &nbsp; <b>Contáctame</b>
+                </i>
+
+                <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="email@dominio.com" required formControlName="email">
+                    </div>
+                    <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']"
+                        class="alert-danger">
+                        <p>Este campo es requerido</p>
+                    </div>
+                    <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['email']"
+                        class="alert-danger">
+                        <p>El formato debe ser válido</p>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="phone" class="form-control" placeholder="Phone Number" required
+                            formControlName="phone">
+                    </div>
+                    <div *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors?.['required']"
+                        class="alert-danger">
+                        <p>Este campo es requerido</p>
+                    </div>
+                    <div *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors?.['pattern']"
+                        class="alert-danger">
+                        <p>Debe colocar su teléfono</p>
+                    </div>
+
+                    <div class="mb-3">
+                    <textarea name="message" placeholder="Message" required formControlName="message">
+                    </textarea>
+                    </div>
+
+                    <div *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['required']"
+                        class="alert-danger">
+                        <p>Este campo es requerido</p>
+                    </div>
+                    <div *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['minlength']"
+                        class="alert-danger">
+                        <p>Este campo debe tener al menos {{
+                        contactForm.get('message')?.errors?.['minlength']?.requiredLength}} caracteres</p>
+                    </div>
+
+                </form>
+            </button>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid"><a
+                        href='mailito:natustella@gmail.com'>Enviar</a>
+                </button>
+            </div>
+
+        </div>
+
+        <div>
+            <p> Copyright © 2022 &nbsp;&nbsp;&nbsp;
+                <b>Natalia Herrera&nbsp;&nbsp;&nbsp;
+                </b> All Rights Reserved.
+            </p>
+        </div>
+
+    </section><br>
+</footer>

@@ -1,0 +1,53 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#skillsModal">
+  Nuevo Skills
+</button>&nbsp;
+
+<div class="modal fade" id="skillsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <form [formGroup]="form" (ngSubmit)="form.valid && onCreate()" name="skillForm" >
+
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+            <label for="recipient-int" class="col-form-label">Porcentaje</label>
+            <input id="percent" name="percent" type="int" class="form-control" required formControlName="percent" [(ngModel)]="percent">
+            
+            <div *ngIf="form.get('percent')?.touched && form.get('percent')?.errors?.['required']">
+            <p>Este campo es requerido</p>
+            </div>
+
+            <div *ngIf="form.get('percent')?.touched && form.get('percent')?.errors?.['pattern']">
+            <p>Este campo solo acepta números</p>
+            </div>
+
+            <div *ngIf="form.get('percent')?.touched && form.get('percent')?.errors?.['max']">
+              <p>El porcentaje no puede ser mayor a 100</p>
+            </div>
+
+            <div *ngIf="form.get('percent')?.touched && form.get('percent')?.errors?.['min']">
+              <p>El porcentaje no puede ser menor a 1</p>
+            </div>
+
+            <label for="recipient-text" class="col-form-label">Habilidad</label>
+            <input id="habilidad" name="habilidad" type="text" class="form-control" required formControlName="habilidad" [(ngModel)]="habilidad">
+
+            <div *ngIf="form.get('habilidad')?.touched && form.get('habilidad')?.errors?.['required']">
+              <p>Este campo es requerido</p>
+              </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-guarning fw-bold">Guardar</button>
+      </div>
+
+    </form>
+    </div>
+  </div>
+</div>

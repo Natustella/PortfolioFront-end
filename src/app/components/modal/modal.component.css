@@ -1,0 +1,71 @@
+a .btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    background-color: #dbcfbd;
+    border-color: #FAEBD8;
+}
+
+a .btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    color: #010101;
+}
+
+a .btn {
+    border: #dbcfbd;
+}
+
+.modal {
+    --bs-modal-bg: #dbcfbd;
+}
+
+button.btn.btn-primary {
+    color: #010101;
+    box-shadow: #dbcfbd;
+}
+
+.btn-primary {
+    --bs-btn-bg: #dbcfbd;
+    --bs-btn-hover-bg: #CB9A5E !important;
+}
+
+.modal-header {
+    background-color: #CB9A5E;
+}
+
+.modal-title {
+    background-color: #CB9A5E;
+}
+
+.modal-header[_ngcontent-vav-c16] {
+    background-color: #CB9A5E !important;
+}
+
+.modal-footer:hover {
+    color: #CB9A5E !important;
+}
+
+.btn {
+    border-color: #dbcfbd;
+}
+
+a {
+    color: #010101;
+}
+
+
+.error{
+    color:#271503;
+  }
+  
+.border-error{
+    border-color: #e7a350 ;
+  }
+
+  .btn:disabled {
+    background-color: #e7a350;
+  }

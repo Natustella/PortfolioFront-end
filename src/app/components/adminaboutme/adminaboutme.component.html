@@ -1,0 +1,28 @@
+<section id="about me" class="about">
+
+  <app-modaldatos></app-modaldatos>
+  
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12">
+        <img [src]="persona.imgMe" class="rounded-circle" alt="about me" title="yo" id="miFoto">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 mt-4">
+        <ul style="list-style:none" class="titulo">
+          <li>
+            <h4><strong>{{persona.nombre}}</strong></h4>
+          </li>
+          <li>
+            <h6><strong>{{persona.position}}</strong></h6>
+          </li>
+          <li>
+            <h6><strong>{{persona.ubicacion}}</strong></h6>
+          </li><br><br>
+        </ul>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 mt-3">
+        <h5>{{persona.sobreMi}}</h5>
+      </div>
+    </div>
+  </div><br /><br />
+</section>

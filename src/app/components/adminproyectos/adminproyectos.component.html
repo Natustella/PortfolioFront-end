@@ -1,0 +1,20 @@
+<section id="proyectos" class="proyectos">
+    <div>
+        <h3><strong>Proyectos</strong></h3><br>
+
+        <app-modalproyectos></app-modalproyectos><br>
+
+        <ul style="list-style: none"><br />
+            <li *ngFor="let proyecto of proyecto">
+                {{proyecto.descripcion}}
+
+                <button type="button" class="btn btn-secondary">
+                    <i class="fa-solid fa-pen" *ngIf="proyecto.id" (click)="idEdit(proyecto.id)"></i>
+                </button>&nbsp;
+                <button type="button" class="btn btn-secondary">
+                    <i class="fa-solid fa-x" *ngIf="proyecto.id" (click)="delete(proyecto.id)"></i>
+                </button>&nbsp;&nbsp;
+            </li>
+        </ul>
+    </div><br><br>
+</section>

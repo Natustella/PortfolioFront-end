@@ -1,0 +1,13 @@
+* {
+    background-color: #dbcfbd;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #dbcfbd;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
