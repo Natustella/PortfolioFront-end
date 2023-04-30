@@ -1,5 +1,5 @@
 export class Experiencia {
-    id: number | undefined;
+    id: number = 0;
     pos: string;
     logo: string;
     empresa: string;

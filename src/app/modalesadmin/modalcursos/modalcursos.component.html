@@ -16,8 +16,10 @@
 
             <div class="modal-body">
 
+                
+
                 <label for="recipient-name" class="col-form-label">Titulo</label>
-                <input id="titulo" name="titulo" type="text" class="form-control" requerid formControlName="titulo" [(ngModel)]="titulo"><br>
+                <input id="titulo" name="titulo" type="text" class="form-control" required formControlName="titulo" [(ngModel)]="titulo"><br>
 
                 <div *ngIf="form.get('titulo')?.touched && form.get('titulo')?.errors?.['required']">
                     <p>Este campo es requerido</p>
@@ -27,8 +29,8 @@
                 <input id="imag" name="imag" type="text" class="form-control" formControlName="imag" [(ngModel)]="imag"><br>
               
 
-                <label for="recipient-name" class="col-form-label">Dado por</label>
-                <input id="dado" name="dado" type="text" class="form-control" requerid formControlName="dado" [(ngModel)]="dado"><br>
+                <label for="recipient-name" class="col-form-label">Certificado emitido por</label>
+                <input id="dado" name="dado" type="text" class="form-control" required formControlName="dado" [(ngModel)]="dado"><br>
 
                 <div *ngIf="form.get('dado')?.touched && form.get('dado')?.errors?.['required']"
                 class="alert-danger">
@@ -36,7 +38,7 @@
                 </div>
 
                 <label for="recipient-name" class="col-form-label">Fecha</label>
-                <input id="fecha" name="fecha" type="text" class="form-control" requerid formControlName="fecha" [(ngModel)]="fecha"><br>
+                <input id="fecha" name="fecha" type="text" class="form-control" required formControlName="fecha" [(ngModel)]="fecha"><br>
 
                 <div *ngIf="form.get('fecha')?.touched && form.get('fecha')?.errors?.['required']"
                 class="alert-danger">

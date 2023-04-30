@@ -64,5 +64,4 @@ export class ModalcursosComponent implements OnInit {
       this.form.markAllAsTouched();
     }
   }
-
 }

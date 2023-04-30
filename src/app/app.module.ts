@@ -35,6 +35,7 @@ import { AdminnavbarComponent } from './components/adminnavbar/adminnavbar.compo
 import { AdminlogoutComponent } from './components/adminlogout/adminlogout.component';
 import { ModalredesComponent } from './modalesadmin/modalredes/modalredes.component';
 import { ModaldatosComponent } from './modalesadmin/modaldatos/modaldatos.component';
+import { EditcursosComponent } from './modalesadmin/editcursos/editcursos.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCqAQn5-qPH7SnsLIDeqXw2cWwIGQ3OSq8",
@@ -78,6 +79,7 @@ const analytics = getAnalytics(app);
     AdminlogoutComponent,
     ModalredesComponent,
     ModaldatosComponent,
+    EditcursosComponent,
   ],
   imports: [
     BrowserModule,
