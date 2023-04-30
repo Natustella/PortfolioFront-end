@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Curso } from 'src/app/model/curso';
 import { CursoService } from 'src/app/servicios/curso.service';
+import { Router } from '@angular/router';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -10,10 +11,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class AdmincursosComponent implements OnInit{
   curso:Curso[] = [];
-  idEditar: number | undefined;
-  isTrue: Boolean = false;
 
-  constructor(public scurso:CursoService) {}
+  constructor(private scurso:CursoService, private router: Router) {}
 
   ngOnInit(): void {
     this.cargarCurso();
@@ -22,18 +21,26 @@ export class AdmincursosComponent implements OnInit{
     this.scurso.lista().subscribe(data =>
       {this.curso=data});
   }
-  idEdit(id:number): void{
-    this.isTrue = true;
-    this.idEditar = id;
-  }
 
-  delete(id:number){
-    if(id != undefined){
+  delete(id:any){
+    let elim = confirm("Desea eliminar este elemento?");
+    if (elim == true){
       this.scurso.delete(id).subscribe(data =>{
-        this.cargarCurso();
+        alert("Curso eliminado correctamente")
+        location.reload();
+        //this.cargarCurso();
       }, err =>{
-        alert("No se pudo eliminar el curso")
+        alert("No se pudo eliminar el curso");
       }) 
     }
   }
-}
+}  
+/*delete(id:number){
+  if(id != undefined){
+    this.sexperiencia.delete(id).subscribe(data =>{
+      this.cargarExperiencia();
+    }, err =>{
+      alert("No se pudo eliminar la experiencia")
+    }) 
+  }
+}*/

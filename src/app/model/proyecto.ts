@@ -1,5 +1,5 @@
 export class Proyecto {
-    id: number | undefined;
+    id: number = 0;
     descripcion: string;
 
     constructor(descripcion: string){

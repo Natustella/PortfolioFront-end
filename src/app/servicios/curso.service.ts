@@ -27,8 +27,8 @@ export class CursoService {
       return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
     }
   
-  public edit(id: number, curso:Curso):Observable<any>{
-        return this.httpClient.put<any>(this.URL +  `editar/${id}`, curso);
+  public edit(curso:Curso):Observable<Curso>{
+        return this.httpClient.put<Curso>(this.URL + 'editar/', curso);
       }
 
    getCursoId(id:number) {
@@ -40,3 +40,4 @@ export class CursoService {
    }
 
 }
+

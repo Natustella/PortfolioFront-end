@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ModalComponent implements OnInit {
   form: FormGroup;
-
+  
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       email:['', [Validators.required, Validators.email]],

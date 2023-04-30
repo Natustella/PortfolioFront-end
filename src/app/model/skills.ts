@@ -1,5 +1,5 @@
 export class Skills {
-    id: number | undefined;
+    id: number = 0;
     percent: number;
     habilidad: string;
 

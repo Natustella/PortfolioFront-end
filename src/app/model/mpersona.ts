@@ -1,5 +1,5 @@
 export class Mpersona {
-    id: number | undefined;
+    id: number = 0;
     imgMe: string;
     nombre: string;
     position: string;

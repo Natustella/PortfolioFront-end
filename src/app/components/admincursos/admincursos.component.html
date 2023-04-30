@@ -2,7 +2,7 @@
     <div>
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
             aria-expanded="true">
-            <h3><strong>Cursos</strong></h3> &nbsp; &nbsp;<i class="fa-solid fa-sort"></i>
+            <h3><strong>Cursos</strong></h3> &nbsp; &nbsp;
             <br>
         </button><br>
 
@@ -11,25 +11,30 @@
     </div>
     <br>
     <div class="cursos">
-        <div *ngFor="let cursos of curso" class="accordion-item">
+        <div *ngFor="let cursos of curso">
             <h6>
                 <strong>{{cursos.titulo}}</strong> &nbsp; &nbsp;
             </h6>
-            <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+            <div>
                     <br>
                     <img [src]="cursos.imag"> &nbsp;&nbsp;
                     <strong>{{cursos.dado}}</strong> &nbsp;{{cursos.fecha}}
                     &nbsp;&nbsp;
+
+                    <label class="btn btn-secondary" routerLink="curso/editar/{{cursos.id}}">
+                        <i class="fa-solid fa-pen"></i>
+                    </label>
+
+                    <!--<button type="button" class="btn btn-secondary" (click)="idEdit(curso.id); cursoId = curso.id" data-bs-toggle="modal" data-bs-target="#cursoEdit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <app-editcursos></app-editcursos>-->
+
                     <button type="button" class="btn btn-secondary">
-                        <i class="fa-solid fa-pen" *ngIf="cursos.id !== undefined" (click)="idEdit(cursos.id)"></i>
-                    </button>&nbsp;
-                    <button type="button" class="btn btn-secondary">
-                        <i class="fa-solid fa-x" *ngIf="cursos.id !== undefined" (click)="delete(cursos.id)"></i>
+                        <i class="fa-solid fa-x" (click)="delete(cursos.id)"></i>
                     </button>&nbsp;&nbsp;
                 </div>
                 <br><br>
             </div>
         </div>
-    </div>
 </section><br><br>

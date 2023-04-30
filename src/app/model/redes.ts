@@ -1,5 +1,5 @@
 export class Redes {
-    id: number | undefined;
+    id: number = 0;
     url: string;
     icoFont: string;
 
