@@ -10,7 +10,7 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 })
 export class ModalexperienciaComponent implements OnInit {
    form: FormGroup;
-   posicion: string = '';
+   pos: string = '';
    logo: string ='';
    empresa: string ='';
    desde: string = '';
@@ -20,7 +20,7 @@ export class ModalexperienciaComponent implements OnInit {
   constructor(private fb: FormBuilder, private sexperiencia: ExperienciaService) { 
 
   this.form = this.fb.group ({
-      posicion: ['', [Validators.required]],
+      pos: ['', [Validators.required]],
       logo: [''],
       empresa: ['', [Validators.required]],
       desde: ['', [Validators.required]],
@@ -32,7 +32,7 @@ export class ModalexperienciaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get Posicion() {
+  get Pos() {
     return this.form.get("posicion")
   }
 
@@ -57,7 +57,7 @@ export class ModalexperienciaComponent implements OnInit {
   }
 
   onCreate(): void {
-    const exp = new Experiencia(this.posicion, this.logo, this.empresa, this.desde, this.hasta, this.actividad);    
+    const exp = new Experiencia(this.pos, this.logo, this.empresa, this.desde, this.hasta, this.actividad);    
     this.sexperiencia.save(exp).subscribe(data => {
       alert("Nueva experiencia añadida");
       window.location.reload();

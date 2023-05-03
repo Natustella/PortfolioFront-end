@@ -8,12 +8,15 @@
       <span class="col-8 col-sm-6 col-md-3" *ngFor="let skills of skills">
         <div class="progress-circle progress-{{skills.percent}}"><span>{{skills.habilidad}}</span>
         </div><br>
+
+
+        <label class="btn btn-secondary" routerLink="skills/editar/{{skills.id}}">
+          <i class="fa-solid fa-pen"></i>
+        </label>&nbsp;
         <button type="button" class="btn btn-secondary">
-          <i class="fa-solid fa-pen" *ngIf="skills.id" (click)="idEdit(skills.id)"></i>
-        </button>&nbsp;
-        <button type="button" class="btn btn-secondary">
-          <i class="fa-solid fa-x" *ngIf="skills.id" (click)="delete(skills.id)"></i>
+          <i class="fa-solid fa-x" (click)="delete(skills.id)"></i>
         </button><br><br>
+
       </span>
     </div>
   </div>

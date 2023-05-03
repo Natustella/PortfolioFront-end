@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar()" name="proyectoForm">
+
+    <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+
+        <div class="mb-3">
+
+            <label for="message-text" class="col-form-label">Descripción</label>
+            <textarea id="descripcion" name="descripcion" type="textarea" class="form-control" required
+                formControlName="descripcion"></textarea>
+
+            <div *ngIf="form.get('descripcion')?.touched && form.get('descripcion')?.errors?.['required']">
+                <p>Este campo es requerido</p>
+            </div>
+
+            <div *ngIf="form.get('descripcion')?.touched && form.get('descripcion')?.errors?.['minlength']"
+                class="alert-danger">
+                <p>Este campo debe tener al menos {{
+                    form.get('descripcion')?.errors?.['minlength']?.requiredLength}} caracteres</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-guarning fw-bold">Guardar</button>
+    </div>
+
+</form>

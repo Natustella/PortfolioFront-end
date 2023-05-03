@@ -30,11 +30,12 @@ export class EditcursosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  //Fetch the curso to edit from the database using the id parameter from the route
+  //Obtengo el curso para editar desde la base de datos usando el parámetro id de la ruta
     const cursoId = this.activatedRoute.snapshot.params['id'];
     this.sCurso.lista().subscribe(data => {
       this.curso = data;
-      //once acces to data, it finds the element with same id to patch form fields with its info.
+      //Una vez que accede a los datos, encuentra el elemento con la misma identificación 
+      //para parchear los campos de formulario con su información.
       const element = this.curso.find(item => item.id === parseInt(cursoId));
       this.form.patchValue({
         id: element?.id,

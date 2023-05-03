@@ -12,12 +12,15 @@
                 <i [ngClass]="red.icoFont"></i>
               </a>&nbsp;&nbsp;
           
-              <button type="button" class="btn btn-secondary">
-                <i class="fa-solid fa-pen" *ngIf="red.id" (click)="idEdit(red.id)"></i>
-              </button>&nbsp;
-              <button type="button" class="btn btn-secondary" *ngIf="red.id" (click)="delete(red.id)">
-                <i class="fa-solid fa-x"></i>
-              </button>&nbsp;&nbsp;
+              <label class="btn btn-secondary" routerLink="redes/editar/{{red.id}}">
+                <i class="fa-solid fa-pen"></i>
+             </label>&nbsp;&nbsp;&nbsp;
+              
+
+             <button type="button" class="btn btn-secondary">
+              <i class="fa-solid fa-x" (click)="delete(red.id)"></i>
+            </button>&nbsp;&nbsp;   
+
             </li>
           </ul>
           

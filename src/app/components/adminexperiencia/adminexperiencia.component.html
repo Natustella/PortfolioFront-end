@@ -2,7 +2,7 @@
   <div>
     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
       aria-expanded="true">
-      <h3><strong>Experiencia</strong></h3> &nbsp; &nbsp;<i class="fa-solid fa-sort"></i>
+      <h3><strong>Experiencia</strong></h3> &nbsp; &nbsp;
       <br>
     </button><br>
 
@@ -11,12 +11,11 @@
   </div>
   <br>
   <div class="experiencia">
-    <div *ngFor="let experiencia of experiencias" class="accordion-item">
+    <div *ngFor="let experiencia of experiencias">
       <h6>
         <strong>{{experiencia.pos}}</strong> &nbsp; &nbsp;
       </h6>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
+        <div>
           <br>
           <img [src]="experiencia.logo"> &nbsp;
           <strong>{{experiencia.empresa}}</strong> &nbsp;{{experiencia.desde}} - {{experiencia.hasta}}
@@ -24,15 +23,17 @@
           <br>
           <p>{{experiencia.actividad}}</p>
 
+          <label class="btn btn-secondary" routerLink="experiencia/editar/{{experiencia.id}}">
+            <i class="fa-solid fa-pen"></i>
+        </label>&nbsp;&nbsp;&nbsp;
+        
+
           <button type="button" class="btn btn-secondary">
-            <i class="fa-solid fa-pen" *ngIf="experiencia.id !== undefined" (click)="idEdit(experiencia.id)"></i>
-          </button>&nbsp;
-          <button type="button" class="btn btn-secondary">
-            <i class="fa-solid fa-x" *ngIf="experiencia.id !== undefined" (click)="delete(experiencia.id)"></i>
+            <i class="fa-solid fa-x" (click)="delete(experiencia.id)"></i>
           </button>&nbsp;&nbsp;    
           <br><br><br>
         </div>
-      </div>
+    
     </div>
   </div>
 </section><br>

@@ -8,12 +8,15 @@
             <li *ngFor="let proyecto of proyecto">
                 {{proyecto.descripcion}}
 
+                <label class="btn btn-secondary" routerLink="proyecto/editar/{{proyecto.id}}">
+                    <i class="fa-solid fa-pen"></i>
+                </label>&nbsp;&nbsp;&nbsp;
+
+
                 <button type="button" class="btn btn-secondary">
-                    <i class="fa-solid fa-pen" *ngIf="proyecto.id" (click)="idEdit(proyecto.id)"></i>
-                </button>&nbsp;
-                <button type="button" class="btn btn-secondary">
-                    <i class="fa-solid fa-x" *ngIf="proyecto.id" (click)="delete(proyecto.id)"></i>
+                    <i class="fa-solid fa-x" (click)="delete(proyecto.id)"></i>
                 </button>&nbsp;&nbsp;
+
             </li>
         </ul>
     </div><br><br>

@@ -8,25 +8,41 @@ import { Mpersona } from '../model/mpersona';
 })
 export class MpersonaService {
   URL = 'http://localhost:8080/persona/';
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  public getPersona(): Observable<Mpersona>{
+  public getPersona(): Observable<Mpersona> {
     return this.httpClient.get<Mpersona>(this.URL + 'traer')
   }
 
-  public detail(id: number):Observable<Mpersona>{
+  public detail(id: number): Observable<Mpersona> {
     return this.httpClient.get<Mpersona>(this.URL + 'perfil');
-    }
+  }
 
-  public save(persona: Mpersona):Observable<any>{
+  public save(persona: Mpersona): Observable<any> {
     return this.httpClient.post<any>(this.URL + 'crear', persona);
   }
 
-  public delete(id: number):Observable<any>{
+  public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
-    }
+  }
 
-  public edit(id: number, persona: Mpersona):Observable<any>{
-    return this.httpClient.put<any>(this.URL +  `editar/${id}`, persona);
+  public edit(persona: Mpersona): Observable<Mpersona> {
+    return this.httpClient.put<Mpersona>(this.URL + 'editar/', persona);
+  }
+
+  public lista(): Observable<Mpersona[]> {
+    return this.httpClient.get<Mpersona[]>(this.URL + 'lista');
+  }
+
+  public detalle(id: number): Observable<Mpersona> {
+    return this.httpClient.get<Mpersona>(this.URL + `detalle/${id}`);
+  }
+
+  getPersonaId(id: number) {
+    return this.httpClient.get<Mpersona>(this.URL + "/" + id)
+  }
+
+  updatePersona(persona: Mpersona) {
+    return this.httpClient.put<Mpersona>(this.URL + "/" + persona.id, persona)
   }
 }
