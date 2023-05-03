@@ -36,6 +36,10 @@ import { AdminlogoutComponent } from './components/adminlogout/adminlogout.compo
 import { ModalredesComponent } from './modalesadmin/modalredes/modalredes.component';
 import { ModaldatosComponent } from './modalesadmin/modaldatos/modaldatos.component';
 import { EditcursosComponent } from './modalesadmin/editcursos/editcursos.component';
+import { EditexperienciaComponent } from './modalesadmin/editexperiencia/editexperiencia.component';
+import { EditredesComponent } from './modalesadmin/editredes/editredes.component';
+import { EditproyectosComponent } from './modalesadmin/editproyectos/editproyectos.component';
+import { EditskillsComponent } from './modalesadmin/editskills/editskills.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCqAQn5-qPH7SnsLIDeqXw2cWwIGQ3OSq8",
@@ -80,6 +84,10 @@ const analytics = getAnalytics(app);
     ModalredesComponent,
     ModaldatosComponent,
     EditcursosComponent,
+    EditexperienciaComponent,
+    EditredesComponent,
+    EditproyectosComponent,
+    EditskillsComponent,
   ],
   imports: [
     BrowserModule,

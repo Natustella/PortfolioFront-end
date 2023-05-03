@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Mpersona } from 'src/app/model/mpersona';
 import { MpersonaService } from 'src/app/servicios/mpersona.service';
 
@@ -9,34 +10,40 @@ import { MpersonaService } from 'src/app/servicios/mpersona.service';
   styleUrls: ['./modaldatos.component.css']
 })
 export class ModaldatosComponent implements OnInit{
-  personaData: Mpersona;
   form: FormGroup;
-  imgMe: string = '';
-  nombre: string = '';
-  position: string = '';
-  ubicacion: string = '';
-  sobreMi: string = '';
+  persona: Mpersona [] = []
 
-  constructor(private readonly fb: FormBuilder, private persona:MpersonaService){
+  constructor(private fb: FormBuilder, 
+              private spersona:MpersonaService,
+              private activatedRoute: ActivatedRoute,
+              private router: Router,
+              ){
+
     this.form = this.fb.group ({
+      id: [''],
       imgMe: [''],
-      nombre: ['', [Validators.required]],
-      position: ['', [Validators.required]],
-      ubicacion: ['', [Validators.required]],
-      sobreMi:['', [Validators.required, Validators.minLength(15)]]
+      nombre: [''],
+      position: [''],
+      ubicacion: [''],
+      sobreMi:['']
     })
-    this.personaData = new Mpersona('', '', '', '', '');
   }
 
-  ngOnInit(): void {
-    this.cargarPersona();
-  }
-
-  cargarPersona():void{
-    this.persona.detail(1).subscribe(data => {
-      this.personaData = data;
-    });
-    
+ngOnInit(): void {
+    const personaId = this.activatedRoute.snapshot.params['id'];
+    this.spersona.lista().subscribe(data => {
+      this.persona = data;
+      const element = this.persona.find(item => item.id === parseInt (personaId));
+      this.form.patchValue({
+        id: element!.id,
+        imgMe: element?.imgMe,
+        nombre: element?.nombre,
+        position: element?.position,
+        ubicacion: element?.ubicacion,
+        sobreMi: element?.sobreMi,
+      })
+    })
+  
   }
   get ImgMe() {
     return this.form.get("imgMe")
@@ -58,37 +65,22 @@ export class ModaldatosComponent implements OnInit{
     return this.form.get("sobreMi")
   }
 
-  onCreate(): void {
-    const persona = new Mpersona(this.imgMe, this.nombre, this.position, this.ubicacion, this.sobreMi);    
-    this.persona.save(persona).subscribe(data => {
-      alert("Nuevos datos añadidos");
-      window.location.reload();
-    }, err =>{
-      alert("No se cargaron los nuevos datos, intente nuevamente");
-      this.form.reset();
-    });
+
+  onEnviar() {
+    const persona: Mpersona = {
+      id: parseInt(this.activatedRoute.snapshot.params['id']),
+      imgMe: this.form.value.imgMe,
+      nombre: this.form.value.nombre,
+      position: this.form.value.position,
+      ubicacion: this.form.value.ubicacion,
+      sobreMi: this.form.value.sobreMi,
+    };
+    this.spersona.edit(persona).subscribe(() => {
+      console.log(persona);
+    })
+    alert("Datos modificados correctamente")
+    this.router.navigate(['admin']);
   }
-
-  onEnviar(event: Event) {
-    event.preventDefault();
-    if (this.form.valid) {
-      this.onCreate();
-    } else {
-      alert("falló en la carga, intente nuevamente");
-      this.form.markAllAsTouched();
-    }
-  }
-
-
-  delete(id:number){
-    if(id != undefined){
-      this.persona.delete(id).subscribe(data =>{
-        this.cargarPersona();
-      }, err =>{
-        alert("No se pudieron eliminar los datos")
-      }) 
-    }
-  }
-
 }
+
 

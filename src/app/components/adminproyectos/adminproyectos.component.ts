@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
@@ -11,10 +12,8 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
 })
 export class AdminproyectosComponent implements OnInit{
   proyecto:Proyecto[] = [];
-  idEditar: number | undefined;
-  isTrue: Boolean = false;
 
-  constructor(public sproyecto:ProyectoService) {}
+  constructor(public sproyecto:ProyectoService, private router: Router) {}
 
   ngOnInit(): void {
     this.cargarProyecto();
@@ -23,18 +22,16 @@ export class AdminproyectosComponent implements OnInit{
     this.sproyecto.lista().subscribe(data =>
       {this.proyecto=data});
   }
-  idEdit(id:number): void{
-    this.isTrue = true;
-    this.idEditar = id;
-  }
 
-  delete(id:number){
-    if(id != undefined){
-      this.sproyecto.delete(id).subscribe(data =>{
-        this.cargarProyecto();
-      }, err =>{
-        alert("No se pudo eliminar el proyecto")
-      }) 
-    }
+  delete(id:any){
+    let elim = confirm("Desea eliminar este proyecto?");
+    if (elim == true){
+    this.sproyecto.delete(id).subscribe(data =>{
+      alert("Proyecto eliminado correctamente")
+      location.reload();
+    }, err =>{
+      alert("No se pudo eliminar este proyecto")
+    }) 
   }
-  }
+}
+}

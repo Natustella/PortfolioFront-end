@@ -1,10 +1,10 @@
 export class Mpersona {
-    id: number = 0;
-    imgMe: string;
-    nombre: string;
-    position: string;
-    ubicacion: string;
-    sobreMi: string;
+    public id!: number;
+    public imgMe!: string;
+    public nombre!: string;
+    public position!: string;
+    public ubicacion!: string;
+    public sobreMi!: string;
 
     constructor(imgMe: string, nombre: string, position: string, ubicacion: string, sobreMi: string){
         this.nombre = nombre;

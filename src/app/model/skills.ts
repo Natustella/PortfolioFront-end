@@ -1,7 +1,7 @@
 export class Skills {
-    id: number = 0;
-    percent: number;
-    habilidad: string;
+    public id?: number;
+    public percent!: number;
+    public habilidad!: string;
 
 
     constructor(percent: number, habilidad: string){

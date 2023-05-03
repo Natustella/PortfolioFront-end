@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { error } from 'jquery';
 import { Redes } from 'src/app/model/redes';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { RedesService } from 'src/app/servicios/redes.service';
@@ -10,10 +12,8 @@ import { RedesService } from 'src/app/servicios/redes.service';
 })
 export class AdminnavbarComponent implements OnInit {
   redes: Redes[] = [];
-  idEditar: number | undefined;
-  isTrue: Boolean = false;
 
-  constructor(public sredes:RedesService) { }
+  constructor(private sredes:RedesService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -24,18 +24,15 @@ export class AdminnavbarComponent implements OnInit {
       {this.redes=data});
   }
 
-  idEdit(id:number): void{
-    this.isTrue = true;
-    this.idEditar = id;
-  }
-
-  delete(id:number){
-    if(id != undefined){
+  delete(id:any){
+    let elim = confirm("Desea eliminar esta Red Social?");
+    if (elim == true){
       this.sredes.delete(id).subscribe(data =>{
-        this.cargarRedes();
+        alert("Red Social eliminada correctamente")
+        location.reload();
       }, err =>{
-        alert("no se pudo eliminar la Red Social")
-      }) 
+        alert("No se pudo eliminar esta Red Social")
+      });
     }
   }
 }

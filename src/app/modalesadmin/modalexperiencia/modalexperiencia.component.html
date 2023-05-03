@@ -17,7 +17,7 @@
 
                     <label for="recipient-name" class="col-form-label">Posición</label>
                     <input id="posicion" name="posicion" type="text" class="form-control" required
-                        formControlName="posicion" [(ngModel)]="posicion"><br>
+                        formControlName="posicion" [(ngModel)]="pos"><br>
 
                     <div *ngIf="form.get('posicion')?.touched && form.get('posicion')?.errors?.['required']">
                         <p>Este campo es requerido</p>

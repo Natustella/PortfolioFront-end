@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Mpersona } from 'src/app/model/mpersona';
 import { MpersonaService } from 'src/app/servicios/mpersona.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
@@ -10,10 +11,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class AdminaboutmeComponent implements OnInit{
   persona: Mpersona = new Mpersona(" "," "," "," "," ");
-  idEditar: number | undefined;
-  isTrue: Boolean = false;
 
-  constructor(public spersona:MpersonaService) {}
+  constructor(public spersona:MpersonaService, private router: Router) {}
 
   ngOnInit(): void {
 
@@ -24,19 +23,5 @@ export class AdminaboutmeComponent implements OnInit{
     this.spersona.detail(1).subscribe(data => 
       {this.persona=data});
   }
-  idEdit(id:number): void{
-    this.isTrue = true;
-    this.idEditar = id;
-  }
-
-  delete(id:number){
-    if(id != undefined){
-      this.spersona.delete(id).subscribe(data =>{
-        this.cargarPersona();
-      }, err =>{
-        alert("no se pudo eliminar la Persona")
-      }) 
-    }
-  }
-  }
+}
   

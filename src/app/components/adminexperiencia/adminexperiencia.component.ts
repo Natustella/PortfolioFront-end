@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
@@ -10,10 +11,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class AdminexperienciaComponent implements OnInit{
   experiencias: Experiencia[] = []; 
-  idEditar: number | undefined;
-  isTrue: Boolean = false;
 
-  constructor(public sexperiencia:ExperienciaService) {}
+  constructor(private sexperiencia:ExperienciaService, private router: Router) {}
 
   ngOnInit(): void {
 
@@ -24,21 +23,18 @@ export class AdminexperienciaComponent implements OnInit{
       {this.experiencias=data});
   }
 
-  idEdit(id:number): void{
-    this.isTrue = true;
-    this.idEditar = id;
-  }
-
-  delete(id:number){
-    if(id != undefined){
+  delete(id:any){
+      let elim = confirm("Desea eliminar esta experiencia?");
+      if (elim == true){
       this.sexperiencia.delete(id).subscribe(data =>{
-        this.cargarExperiencia();
+        alert("Experiencia eliminada correctamente")
+        location.reload();
       }, err =>{
         alert("No se pudo eliminar la experiencia")
       }) 
     }
   }
-  }
+}
   
 
 

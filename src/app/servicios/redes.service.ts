@@ -9,29 +9,37 @@ import { Observable } from 'rxjs';
 export class RedesService {
   URL = 'http://localhost:8080/redes/';
 
-  constructor(private httpClient:HttpClient) { }
-  public getRedes(): Observable<Redes>{
+  constructor(private httpClient: HttpClient) { }
+  public getRedes(): Observable<Redes> {
     return this.httpClient.get<Redes>(this.URL + 'traer')
   }
 
-  public detail(id: number):Observable<Redes>{
+  public detail(id: number): Observable<Redes> {
     return this.httpClient.get<Redes>(this.URL + `detalle/${id}`);
-    }
+  }
 
-  public lista():Observable<Redes[]>{
+  public lista(): Observable<Redes[]> {
     return this.httpClient.get<Redes[]>(this.URL + 'lista');
   }
 
-  public save(redes: Redes):Observable<any>{
+  public save(redes: Redes): Observable<any> {
     return this.httpClient.post<any>(this.URL + 'crear', redes);
   }
 
-  public delete(id: number):Observable<any>{
+  public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
-    }
+  }
 
-  public edit(id: number, redes: Redes):Observable<any>{
-    return this.httpClient.put<any>(this.URL +  `editar/${id}`, redes);
-    }
+  public edit(redes: Redes): Observable<Redes> {
+    return this.httpClient.put<Redes>(this.URL + 'editar/', redes);
+  }
+
+  getRedesId(id: number) {
+    return this.httpClient.get<Redes>(this.URL + "/" + id)
+  }
+
+  updateRedes(redes: Redes) {
+    return this.httpClient.put<Redes>(this.URL + "/" + redes.id, redes)
+  }
 }
 

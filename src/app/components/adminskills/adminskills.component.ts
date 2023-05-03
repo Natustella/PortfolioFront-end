@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Skills } from 'src/app/model/skills';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { SkillsService } from 'src/app/servicios/skills.service';
@@ -10,10 +11,8 @@ import { SkillsService } from 'src/app/servicios/skills.service';
 })
 export class AdminskillsComponent implements OnInit{
   skills:Skills[]=[];
-  idEditar: number | undefined;
-  isTrue: Boolean = false;
 
-  constructor(public sskills:SkillsService) {}
+  constructor(private sskills:SkillsService, private router: Router) {}
 
   ngOnInit(): void {
     this.cargarSkills();
@@ -22,18 +21,16 @@ export class AdminskillsComponent implements OnInit{
     this.sskills.lista().subscribe(data =>
       {this.skills=data})
   }
-  idEdit(id:number): void{
-    this.isTrue = true;
-    this.idEditar = id;
-  }
 
-  delete(id:number){
-    if(id != undefined){
-      this.sskills.delete(id).subscribe(data =>{
-        this.cargarSkills();
-      }, err =>{
-        alert("No se pudo eliminar la habilidad")
-      }) 
-    }
+  delete(id:any){
+    let elim = confirm("Desea eliminar esta habilidad?");
+    if (elim == true){
+    this.sskills.delete(id).subscribe(data =>{
+      alert("Habilidad eliminada correctamente")
+      location.reload();
+    }, err =>{
+      alert("No se pudo eliminar esta habilidad")
+    }) 
   }
-  }
+}
+}
