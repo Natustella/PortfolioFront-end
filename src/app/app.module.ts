@@ -40,18 +40,10 @@ import { EditexperienciaComponent } from './modalesadmin/editexperiencia/editexp
 import { EditredesComponent } from './modalesadmin/editredes/editredes.component';
 import { EditproyectosComponent } from './modalesadmin/editproyectos/editproyectos.component';
 import { EditskillsComponent } from './modalesadmin/editskills/editskills.component';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirebaseApp } from '@angular/fire/app';
+import { environment } from 'src/environments/environment.development';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCqAQn5-qPH7SnsLIDeqXw2cWwIGQ3OSq8",
-  authDomain: "portfolio-eb2dc.firebaseapp.com",
-  projectId: "portfolio-eb2dc",
-  storageBucket: "portfolio-eb2dc.appspot.com",
-  messagingSenderId: "188379008734",
-  appId: "1:188379008734:web:529d6657a325f791be3c4f",
-  measurementId: "G-0XGHK9H7JN"
-};
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 @NgModule({
   declarations: [
@@ -95,6 +87,8 @@ const analytics = getAnalytics(app);
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() =>getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent],
