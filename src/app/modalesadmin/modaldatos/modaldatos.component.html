@@ -1,16 +1,12 @@
 <form [formGroup]="form" (ngSubmit)="onEnviar()" name="experienciaForm">
 
-    <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-
     <div class="modal-body">
 
         <label for="recipient-name" class="col-form-label">Foto</label>
-        <input id="foto" name="foto" type="foto" class="form-control" required formControlName="foto"><br>
+        <input id="foto" name="foto" type="foto" class="form-control" required formControlName="imgMe"><br>
 
         <label for="recipient-name" class="col-form-label">Nombre</label>
-        <input id="nombre" name="name" type="name" class="form-control" required formControlName="name"><br>
+        <input id="nombre" name="nombre" type="name" class="form-control" required formControlName="nombre"><br>
 
 
         <label for="recipient-position" class="col-form-label">Posición</label>
@@ -29,7 +25,6 @@
     </div>
 
     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
         <button type="submit" class="btn btn-guarning fw-bold">Guardar</button>
     </div>
 

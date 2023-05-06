@@ -10,12 +10,7 @@
 
 <form [formGroup]="form" (ngSubmit)="onEnviar()" name="cursoForm">
 
- <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-
     <div class="modal-body">
-
 
         <label for="recipient-name" class="col-form-label">Modificar Título</label>
         <input id="titulo" name="titulo" type="text" class="form-control" required
@@ -49,7 +44,6 @@
     </div>
 
     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button> 
         <button type="submit" class="btn btn-guarning fw-bold">Guardar</button>
     </div>
 

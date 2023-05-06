@@ -31,7 +31,7 @@ export class MpersonaService {
   }
 
   public lista(): Observable<Mpersona[]> {
-    return this.httpClient.get<Mpersona[]>(this.URL + 'lista');
+    return this.httpClient.get<Mpersona[]>(this.URL + 'traer');
   }
 
   public detalle(id: number): Observable<Mpersona> {
