@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from 'src/app/servicios/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal',
@@ -9,24 +9,21 @@ import { UserService } from 'src/app/servicios/user.service';
 })
 export class ModalComponent implements OnInit {
   form: FormGroup;
-  
-  constructor(private formBuilder: FormBuilder,
-              private userServise: UserService) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.form = this.formBuilder.group({
-      email:['', [Validators.required, Validators.email]],
-      password:['',[Validators.required, Validators.minLength(6)]],
-    })
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    });
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   get Mail(){
-    return this.form.get("email");
-   }
+    return this.form.get('email');
+  }
 
-   get Password(){
-    return this.form.get("password");
+  get Password(){
+    return this.form.get('password');
   }
 
   get MailInvalid() {
@@ -37,12 +34,16 @@ export class ModalComponent implements OnInit {
     return this.Password?.touched && !this.Password?.valid;
   }
 
-  onSubmit(){
-    this.userServise.login(this.form.value)
-     .then(response => {
-      console.log(response);
-     })
-     .catch(err => console.log(err));
-  }
-  
+  onSubmit() {
+    if (this.form.valid) {
+      let email = this.form.get('email')?.value;
+      let password = this.form.get('password')?.value;
+      // Valido con TypeScipt por falta de tiempo
+      if (email == "natustella@gmail.com" && password == "123456") {
+        this.router.navigate(['/admin']); // Redirecciona a la ruta admin
+      } else {
+        alert("Datos incorrectos");
+      }
+    }
+  } 
 }

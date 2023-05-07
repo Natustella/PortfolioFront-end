@@ -63,7 +63,7 @@
 	    "pos": "Administrativa - Área de Prestaciones Médicas",
 	    "logo": "./assets/Image/gea.png",
 	    "empresa": "GEA S.A.",
-	    "desde": "Julio 1997 ",
+	    "desde": "Julio 1997",
 	    "hasta": "Septiembre 2010",
 	    "actividad": "Tareas administrativas, área de prestaciones médicas, autorizaciones, control de facturación de prestadores, uso de Nomenclador Nacional, página de AFIP , Superintendencia de Servicios de Salud. APE."
 	}],
@@ -138,5 +138,9 @@
 	{
 		"id": "2",
 		"descripcion": "Creación de Portfolio."
+	},
+	{
+		"id": "3",
+		"descripcion": "Participación de proyecto de implementación SAP-Web-Mobile en mantenimiento de cámaras, empresa de energía."
 	}]
 }

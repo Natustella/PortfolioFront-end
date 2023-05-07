@@ -35,7 +35,7 @@
         </div>
 
         <label for="recipient-name" class="col-form-label">Modificar Actividad</label>
-        <input id="actividad" name="actividad" type="text" class="form-control" required formControlName="actividad">
+        <textarea id="actividad" name="actividad" type="text" class="form-control" required formControlName="actividad"></textarea>
 
         <div *ngIf="form.get('actividad')?.touched && form.get('actividad')?.errors?.['required']">
             <p>Este campo es requerido</p>

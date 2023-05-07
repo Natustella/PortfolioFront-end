@@ -1,5 +1,15 @@
+.modal-body{
+    padding-top: 5em;
+    padding-left: 15em;
+    padding-right: 15em;
+}
+.modal-footer{
+    padding-top: 1em;
+    padding-left: 15em;
+    padding-right: 15em; 
+}
 
-.btn-primary {
+.btn {
     --bs-btn-bg: #dbcfbd;
     --bs-btn-hover-bg: #CB9A5E;
     --bs-btn-border-color: #CB9A5E;
@@ -13,26 +23,6 @@
     --bs-btn-active-color: #141619;
     --bs-btn-disabled-color: #141619;
     --bs-btn-hover-color: #141619;
-}
-
-.btn-secondary {
-    --bs-btn-bg: #dbcfbd;
-    --bs-btn-hover-bg: #CB9A5E;
-    --bs-btn-border-color: #CB9A5E;
-    --bs-btn-color: #141619;   
-    --bs-btn-hover-border-color: #CB9A5E;
-    --bs-btn-active-bg: #CB9A5E;
-    --bs-btn-active-border-color: #CB9A5E;
-    --bs-btn-disabled-bg: #CB9A5E;
-    --bs-btn-disabled-border-color: #CB9A5E;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #141619;
-    --bs-btn-disabled-color: #141619;
-    --bs-btn-hover-color: #141619;
-}
-
-.modal-footer {
-    background-color: #dbcfbd;
 }
 
 p {
