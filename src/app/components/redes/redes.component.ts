@@ -10,7 +10,7 @@ import { RedesService } from 'src/app/servicios/redes.service';
 })
 export class RedesComponent implements OnInit {
 redes: Redes[] = [];
-  constructor(public sredes:RedesService) { }
+  constructor(private sredes:RedesService) { }
 
   ngOnInit(): void {
 

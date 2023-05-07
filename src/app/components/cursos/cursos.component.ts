@@ -10,7 +10,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class CursosComponent implements OnInit{
   curso:Curso[] = [];
-  constructor(public scurso:CursoService) {}
+  constructor(private scurso:CursoService) {}
 
   ngOnInit(): void {
     this.cargarCurso();

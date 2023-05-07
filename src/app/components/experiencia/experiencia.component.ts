@@ -11,7 +11,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ExperienciaComponent implements OnInit{
   experiencias: Experiencia[] = []; 
-  constructor(public sexperiencia:ExperienciaService) {}
+  constructor(private sexperiencia:ExperienciaService) {}
 
   ngOnInit(): void {
 

@@ -10,7 +10,7 @@ import { SkillsService } from 'src/app/servicios/skills.service';
 })
 export class SkillsComponent implements OnInit{
   skills:Skills[]=[];
-  constructor(public sskills:SkillsService) {}
+  constructor(private sskills:SkillsService) {}
 
   ngOnInit(): void {
     this.cargarSkills();

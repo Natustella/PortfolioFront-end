@@ -10,7 +10,7 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
 })
 export class ProyectosComponent implements OnInit{
   proyecto:Proyecto[] = [];
-  constructor(public sproyecto:ProyectoService) {}
+  constructor(private sproyecto:ProyectoService) {}
 
   ngOnInit(): void {
     this.cargarProyecto();

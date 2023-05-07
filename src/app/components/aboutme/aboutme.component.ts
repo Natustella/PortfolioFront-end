@@ -11,7 +11,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class AboutmeComponent implements OnInit{
 persona: Mpersona = new Mpersona(" "," "," "," "," ");
-  constructor(public spersona:MpersonaService) {}
+  constructor(private spersona:MpersonaService) {}
 
   ngOnInit(): void {
 
