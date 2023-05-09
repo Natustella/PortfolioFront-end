@@ -88,6 +88,13 @@
 		"imag": "./assets/Image/SD.jpg",
 		"dado": "Axigma",
 		"fecha": "Agosto 2021"
+	},
+	{
+		"id": "4",
+		"titulo": "Ingles Técnico para Desarrolladores de Software",
+		"imag": "./assets/Image/CertifIngles.jpg",
+		"dado": "Centro Universitario de Idiomas",
+		"fecha": "Marzo 2023"
 	}],
 
 	"skills": [{
